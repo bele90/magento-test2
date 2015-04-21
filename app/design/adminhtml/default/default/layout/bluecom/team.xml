@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout>
+    <!-- Here, we reference the XML node path of our route -->
+    <adminhtml_member_index>
+        <reference name="content">
+            <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
+            <block type="bluecom_team/adminhtml_member" name="bluecom_team_member" />
+        </reference>
+    </adminhtml_member_index>
+    <adminhtml_department_index>
+        <reference name="content">
+            <!-- We also reference our block by namespacename_modulename/adminhtml_controllername, and name it uniquely -->
+            <block type="bluecom_team/adminhtml_department" name="bluecom_team_department" />
+        </reference>
+    </adminhtml_department_index>
+
+</layout>

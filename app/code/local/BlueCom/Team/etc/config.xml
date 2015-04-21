@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <BlueCom_Team>
+            <version>1.0.0</version>
+        </BlueCom_Team>
+    </modules>
+     
+    <global>
+        <helpers>
+            <bluecom_team>
+                <!-- This is where we define our helper directory -->
+                <class>BlueCom_Team_Helper</class>
+            </bluecom_team>
+        </helpers>
+                    
+        <blocks>
+            <bluecom_team>
+                <!-- Set a block definition and lookup directory -->
+                <class>BlueCom_Team_Block</class>
+            </bluecom_team>
+        </blocks>
+         
+        <models>
+            <bluecom_team>
+                <!-- This is where we define our model directory -->
+                <class>BlueCom_Team_Model</class>
+                <!-- Define a resource to create a custom table -->
+                <resourceModel>bluecom_team_mysql4</resourceModel>
+            </bluecom_team>
+             
+            <!-- Here's our resource model we'll use to create a database table -->
+            <bluecom_team_mysql4>
+                <class>BlueCom_Team_Model_Mysql4</class>
+                <entities>
+                    <member>
+                        <table>bluecom_team_member</table>
+                    </member>
+                    <department>
+                        <table>bluecom_team_department</table>
+                    </department>
+                    <memdept>
+                        <table>bluecom_team_memdept</table>
+                    </memdept>
+                </entities>
+            </bluecom_team_mysql4>
+        </models>
+         
+        <!-- And finally we define our resource setup script -->
+         <resources>
+            <bluecom_team_setup>
+                <setup>
+                    <module>BlueCom_Team</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </bluecom_team_setup>
+            <bluecom_team_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </bluecom_team_write>
+            <bluecom_team_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </bluecom_team_read>
+        </resources>
+    </global>
+     
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <!-- This is how we load our Adminhtml controllers -->
+                    <modules>
+                        <BlueCom_Team before="Mage_Adminhtml">BlueCom_Team_Adminhtml</BlueCom_Team>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+     
+    <adminhtml>
+        <layout>
+            <updates>
+                <bluecom_team>
+                    <file>bluecom/team.xml</file>
+                </bluecom_team>
+            </updates>
+        </layout>
+    </adminhtml>
+    <frontend>
+        <routers>
+            <team>
+                <use>standard</use>
+                <args>
+                    <module>BlueCom_Team</module>
+                    <frontName>ourteams</frontName>
+                </args>
+            </team>
+        </routers>
+        <layout>
+            <updates>
+                <bluecom_team>
+                    <file>bluecom/team.xml</file>
+                </bluecom_team>
+            </updates>
+        </layout>
+    </frontend>
+</config>

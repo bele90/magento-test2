@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <BlueCom_Team>
+            <active>true</active>
+            <codePool>local</codePool>
+        </BlueCom_Team>
+    </modules>
+    <frontend>
+        <routers>
+            <bluecom_team>
+                <use>standard</use>
+                <args>
+                    <module>BlueCom_Team</module>
+                    <frontName>ourteams</frontName>
+                </args>
+            </bluecom_team>
+        </routers>
+    </frontend>
+</config>

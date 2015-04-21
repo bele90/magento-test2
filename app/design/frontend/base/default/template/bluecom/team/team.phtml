@@ -1,0 +1,40 @@
+<?php
+    $depts = $this->getCollection();
+    if($depts):?>
+        <div id="accordion-container">
+        <?php foreach($depts as $dep):?>
+            <h2 class="accordion-header"><?php echo $dep->getName();?></h2>
+                <div class="accordion-content">
+                <table class="adminlist">
+                    <thead>
+                        <tr>
+                            <th>No#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if($dep->members):?>
+
+                                <?php foreach($dep->members as $i=>$mem):?>
+                                    <tr>
+                                        <td><?php echo $i;?></td>
+                                        <td><?php echo $mem->getFirstname();?></td>
+                                        <td><?php echo $mem->getLastname();?></td>
+                                        <td><?php echo $mem->getEmail();?></td>
+                                    </tr>
+                                <?php endforeach;?>
+
+                        <?php endif;?>
+                    </tbody>
+                </table>
+                </div>
+        <?php endforeach; ?>
+        </div>
+    <?php endif;?>
+
+
+
+
+

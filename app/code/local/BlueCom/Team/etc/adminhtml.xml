@@ -1,0 +1,23 @@
+<!-- File: app/code/community/Pulsestorm/Adminhello/etc/adminhtml.xml -->
+<config>
+    <menu>
+        <bluecom translate="title" module="bluecom_team">
+            <title>Teams</title>
+            <sort_order>1000</sort_order>
+            <children>
+                <department>
+                    <title>Department</title>
+                    <sort_order>1</sort_order>
+                    <action>adminhtml/department</action>
+                </department>
+
+                <barsapmple>
+                    <title>Member</title>
+                    <sort_order>3</sort_order>
+                    <action>adminhtml/member</action>
+                </barsapmple>
+            </children>
+        </bluecom>
+    </menu>
+
+</config>
