@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_catalog_product_configurable>
+        <reference name="product_tabs">
+            <action method="addTab"><name>configurable</name><block>swatches/adminhtml_catalog_product_edit_tab_super_config</block></action>
+        </reference>
+    </adminhtml_catalog_product_configurable>
+</layout>

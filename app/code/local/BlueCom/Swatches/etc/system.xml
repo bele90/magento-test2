@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <bluecom translate="label">
+            <label>BlueCom</label>
+            <sort_order>100</sort_order>
+        </bluecom>
+    </tabs>
+    <sections>
+        <swatches translate="label">
+            <label>Configurable Products Swatches</label>
+            <tab>bluecom</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <default translate="label">
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <show_swatches translate="label">
+                            <label>Replace Drop-Downs with Swatches</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_swatches>
+                    </fields>
+                </default>
+                <list>
+                    <label>Category List Page Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <swatches_on_list translate="label">
+                            <label>Display Color Swatches on Product List Pages</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </swatches_on_list>
+                        <img_size_list translate="label comment">
+                            <label>Image Size of swatches on Product List in px</label>
+                            <comment>Images will get resized to the given size on product list page.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                           
+                        </img_size_list>
+                    </fields>
+                </list>
+                <pdp>
+                    <label>Product Details Page Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <img_size_pdp translate="label comment">
+                            <label>Image Size of swatches on Product Details page in px</label>
+                            <comment>Images will get resized to the given size on product details page.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                           
+                        </img_size_pdp>
+                    </fields>
+                </pdp>
+            </groups>
+        </swatches>
+    </sections>
+</config>
