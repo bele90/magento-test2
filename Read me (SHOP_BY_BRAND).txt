@@ -1,0 +1,12 @@
+SHOP BY BRAND 
+
+-Backend
+
+-- Add menu "Brand Directtory/Manage Brands" show list Brands
+-- Add Attribute "brand_id" in Product Information
+
+-Fontend
+
+-- Add menu "BRANDS" on top navigation
+-- Click on menu "BRANDS" will show list Brand
+-- Click on any Brand will show brand's product 
