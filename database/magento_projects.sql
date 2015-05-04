@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2015 at 06:34 AM
+-- Generation Time: May 04, 2015 at 06:41 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.5.19
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `adminnotification_inbox` (
   `url` varchar(255) DEFAULT NULL COMMENT 'Url',
   `is_read` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Flag if notification read',
   `is_remove` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Flag if notification might be removed'
-) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox';
+) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox';
 
 --
 -- Dumping data for table `adminnotification_inbox`
@@ -130,6 +130,8 @@ INSERT INTO `adminnotification_inbox` VALUES(85, 1, '2015-04-16 09:17:07', 'Crit
 INSERT INTO `adminnotification_inbox` VALUES(86, 1, '2015-04-19 15:37:00', 'Second Reminder: Download and install Magento critical security patches now.', 'If you have not done so already, download and install 2 previously-released security patches (SUPEE-5344 and SUPEE-1533) from the Magento Community Edition download page (https://www.magentocommerce.com/products/downloads/magento/).  These security issues affect all versions of Magento Community Edition and enable an attacker to remotely execute code on Magento software. A press release from Check Point Software Technologies tomorrow  will make one of these issues widely known, possibly alerting hackers who may try to exploit it.  Ensure the patches are in place as a preventative measure before the issue is publicized.', 'https://www.magentocommerce.com/products/downloads/magento/', 0, 0);
 INSERT INTO `adminnotification_inbox` VALUES(87, 1, '2015-04-23 12:43:31', 'Urgent: Immediately install Magento critical security patches', 'It is critical for you to download and install 2 previously-released security patches (SUPEE-5344 and SUPEE-1533) from the Magento Community Edition download page (https://www.magentocommerce.com/products/downloads/magento/).  Please do this immediately, as Check Point Software Technologies has published a technical description of how they discovered the issue, which we feel might serve as a tutorial for implementing an attack against your website. ', 'https://www.magentocommerce.com/products/downloads/magento/', 0, 0);
 INSERT INTO `adminnotification_inbox` VALUES(88, 4, '2008-11-07 21:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0);
+INSERT INTO `adminnotification_inbox` VALUES(89, 4, '2008-11-07 21:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0);
+INSERT INTO `adminnotification_inbox` VALUES(90, 4, '2008-11-07 21:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -159,14 +161,14 @@ CREATE TABLE IF NOT EXISTS `admin_role` (
   `role_type` varchar(1) NOT NULL DEFAULT '0' COMMENT 'Role Type',
   `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'User ID',
   `role_name` varchar(50) DEFAULT NULL COMMENT 'Role Name'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Admin Role Table';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Admin Role Table';
 
 --
 -- Dumping data for table `admin_role`
 --
 
 INSERT INTO `admin_role` VALUES(1, 0, 1, 1, 'G', 0, 'Administrators');
-INSERT INTO `admin_role` VALUES(2, 1, 2, 0, 'U', 1, 'Viet');
+INSERT INTO `admin_role` VALUES(3, 1, 2, 0, 'U', 1, 'Viet');
 
 -- --------------------------------------------------------
 
@@ -220,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `admin_user` (
 -- Dumping data for table `admin_user`
 --
 
-INSERT INTO `admin_user` VALUES(1, 'Viet', 'Dinh', 'viet.dinh@bluecomgroup.com', 'admin', '6ec09078e8c8340ae3e64b15a5b97f6f:6EBwFkcCL1xF872VFSYo0LIsUGPHBS4r', '2015-05-03 20:20:10', '2015-05-03 20:20:10', '2015-05-03 20:20:29', 1, 0, 1, 'a:1:{s:11:"configState";a:4:{s:16:"swatches_default";s:1:"1";s:13:"swatches_list";s:1:"1";s:12:"swatches_pdp";s:1:"1";s:31:"advanced_modules_disable_output";s:1:"1";}}', NULL, NULL);
+INSERT INTO `admin_user` VALUES(1, 'Viet', 'Dinh', 'viet.dinh@bluecomgroup.com', 'admin', '35a31a4a37f9844490dfdcbc54b2086e:necucRGvTLFrRK1NawxWEKeLI33kJNVs', '2015-05-03 20:20:10', '2015-05-03 21:39:01', '2015-05-03 20:20:29', 1, 0, 1, 'a:1:{s:11:"configState";a:4:{s:16:"swatches_default";s:1:"1";s:13:"swatches_list";s:1:"1";s:12:"swatches_pdp";s:1:"1";s:31:"advanced_modules_disable_output";s:1:"1";}}', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -541,7 +543,7 @@ CREATE TABLE IF NOT EXISTS `cataloginventory_stock_item` (
   `use_config_enable_qty_inc` smallint(5) unsigned NOT NULL DEFAULT '1' COMMENT 'Use Config Enable Qty Increments',
   `enable_qty_increments` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Enable Qty Increments',
   `is_decimal_divided` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Is Divided into Multiple Boxes for Shipping'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Cataloginventory Stock Item';
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Cataloginventory Stock Item';
 
 --
 -- Dumping data for table `cataloginventory_stock_item`
@@ -551,6 +553,11 @@ INSERT INTO `cataloginventory_stock_item` VALUES(1, 1, 1, '0.0000', '0.0000', 1,
 INSERT INTO `cataloginventory_stock_item` VALUES(2, 2, 1, '100.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0);
 INSERT INTO `cataloginventory_stock_item` VALUES(3, 3, 1, '50.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0);
 INSERT INTO `cataloginventory_stock_item` VALUES(4, 4, 1, '10.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0);
+INSERT INTO `cataloginventory_stock_item` VALUES(5, 5, 1, '99999.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0);
+INSERT INTO `cataloginventory_stock_item` VALUES(6, 6, 1, '99999.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0);
+INSERT INTO `cataloginventory_stock_item` VALUES(7, 7, 1, '99999.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0);
+INSERT INTO `cataloginventory_stock_item` VALUES(8, 8, 1, '99999.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0);
+INSERT INTO `cataloginventory_stock_item` VALUES(9, 9, 1, '99999.0000', '0.0000', 1, 0, 0, 1, '1.0000', 1, '0.0000', 1, 1, NULL, NULL, 1, 0, 1, 0, 1, '0.0000', 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -575,6 +582,11 @@ INSERT INTO `cataloginventory_stock_status` VALUES(1, 1, 1, '0.0000', 1);
 INSERT INTO `cataloginventory_stock_status` VALUES(2, 1, 1, '100.0000', 1);
 INSERT INTO `cataloginventory_stock_status` VALUES(3, 1, 1, '50.0000', 1);
 INSERT INTO `cataloginventory_stock_status` VALUES(4, 1, 1, '10.0000', 1);
+INSERT INTO `cataloginventory_stock_status` VALUES(5, 1, 1, '99999.0000', 1);
+INSERT INTO `cataloginventory_stock_status` VALUES(6, 1, 1, '99999.0000', 1);
+INSERT INTO `cataloginventory_stock_status` VALUES(7, 1, 1, '99999.0000', 1);
+INSERT INTO `cataloginventory_stock_status` VALUES(8, 1, 1, '99999.0000', 1);
+INSERT INTO `cataloginventory_stock_status` VALUES(9, 1, 1, '99999.0000', 1);
 
 -- --------------------------------------------------------
 
@@ -732,13 +744,18 @@ CREATE TABLE IF NOT EXISTS `catalogsearch_fulltext` (
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
   `data_index` longtext COMMENT 'Data index'
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Catalog search result table';
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Catalog search result table';
 
 --
 -- Dumping data for table `catalogsearch_fulltext`
 --
 
 INSERT INTO `catalogsearch_fulltext` VALUES(4, 1, 1, 'CELL001|None|None|None|None|Iphone 6|Iphone 6S Gold|Iphone 6 Red|Iphone 6 Green|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|750|750|750|750|1');
+INSERT INTO `catalogsearch_fulltext` VALUES(5, 5, 1, 'brand-product-1|Brand Product 1|Brand Product 1|Brand Product 1|100|1');
+INSERT INTO `catalogsearch_fulltext` VALUES(6, 6, 1, 'brand-product-2|Brand Product 2|Brand Product 2|Brand Product 2|100|1');
+INSERT INTO `catalogsearch_fulltext` VALUES(7, 7, 1, 'brand-product-3|Brand Product 3|Brand Product 3|Brand Product 3|100|1');
+INSERT INTO `catalogsearch_fulltext` VALUES(8, 8, 1, 'brand-product-4|Brand Product 4|Brand Product 4|Brand Product 4|100|1');
+INSERT INTO `catalogsearch_fulltext` VALUES(9, 9, 1, 'brand-product-5|Brand Product 5|Brand Product 5|Brand Product 5|100|1');
 
 -- --------------------------------------------------------
 
@@ -765,7 +782,7 @@ CREATE TABLE IF NOT EXISTS `catalogsearch_query` (
 -- Dumping data for table `catalogsearch_query`
 --
 
-INSERT INTO `catalogsearch_query` VALUES(1, 'cell', 1, 14, NULL, NULL, 1, 1, 1, 1, '2015-05-03 20:52:59');
+INSERT INTO `catalogsearch_query` VALUES(1, 'cell', 1, 15, NULL, NULL, 1, 1, 1, 1, '2015-05-03 21:40:59');
 
 -- --------------------------------------------------------
 
@@ -1050,6 +1067,11 @@ CREATE TABLE IF NOT EXISTS `catalog_category_product_index` (
 INSERT INTO `catalog_category_product_index` VALUES(2, 2, 0, 0, 1, 1);
 INSERT INTO `catalog_category_product_index` VALUES(2, 3, 0, 0, 1, 1);
 INSERT INTO `catalog_category_product_index` VALUES(2, 4, 0, 0, 1, 1);
+INSERT INTO `catalog_category_product_index` VALUES(2, 5, 0, 0, 1, 4);
+INSERT INTO `catalog_category_product_index` VALUES(2, 6, 0, 0, 1, 4);
+INSERT INTO `catalog_category_product_index` VALUES(2, 7, 0, 0, 1, 4);
+INSERT INTO `catalog_category_product_index` VALUES(2, 8, 0, 0, 1, 4);
+INSERT INTO `catalog_category_product_index` VALUES(2, 9, 0, 0, 1, 4);
 INSERT INTO `catalog_category_product_index` VALUES(2, 1, 60001, 0, 1, 4);
 INSERT INTO `catalog_category_product_index` VALUES(3, 1, 1, 1, 1, 4);
 
@@ -1249,6 +1271,7 @@ INSERT INTO `catalog_eav_attribute` VALUES(129, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 INSERT INTO `catalog_eav_attribute` VALUES(130, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'downloadable', 0, 0, 0, 0);
 INSERT INTO `catalog_eav_attribute` VALUES(131, NULL, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 'downloadable', 0, 0, 0, 0);
 INSERT INTO `catalog_eav_attribute` VALUES(132, NULL, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 'simple,configurable', 0, 0, 0, 0);
+INSERT INTO `catalog_eav_attribute` VALUES(133, NULL, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, NULL, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1373,7 +1396,7 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity` (
   `required_options` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Required Options',
   `created_at` timestamp NULL DEFAULT NULL COMMENT 'Creation Time',
   `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Update Time'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Table';
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Table';
 
 --
 -- Dumping data for table `catalog_product_entity`
@@ -1383,6 +1406,11 @@ INSERT INTO `catalog_product_entity` VALUES(1, 4, 9, 'configurable', 'CELL001', 
 INSERT INTO `catalog_product_entity` VALUES(2, 4, 9, 'simple', 'CELL002', 0, 0, '2015-03-05 20:30:49', '2015-05-03 20:36:21');
 INSERT INTO `catalog_product_entity` VALUES(3, 4, 9, 'simple', 'CELL003', 0, 0, '2015-05-03 20:32:10', '2015-05-03 20:32:10');
 INSERT INTO `catalog_product_entity` VALUES(4, 4, 9, 'simple', 'CELL004', 0, 0, '2015-05-03 20:33:41', '2015-05-03 20:33:41');
+INSERT INTO `catalog_product_entity` VALUES(5, 4, 4, 'simple', 'brand-product-1', 0, 0, '2015-05-03 21:38:20', '2015-05-03 21:38:20');
+INSERT INTO `catalog_product_entity` VALUES(6, 4, 4, 'simple', 'brand-product-2', 0, 0, '2015-05-03 21:38:23', '2015-05-03 21:38:23');
+INSERT INTO `catalog_product_entity` VALUES(7, 4, 4, 'simple', 'brand-product-3', 0, 0, '2015-05-03 21:38:24', '2015-05-03 21:38:24');
+INSERT INTO `catalog_product_entity` VALUES(8, 4, 4, 'simple', 'brand-product-4', 0, 0, '2015-05-03 21:38:25', '2015-05-03 21:38:25');
+INSERT INTO `catalog_product_entity` VALUES(9, 4, 4, 'simple', 'brand-product-5', 0, 0, '2015-05-03 21:38:25', '2015-05-03 21:38:25');
 
 -- --------------------------------------------------------
 
@@ -1443,7 +1471,7 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity_decimal` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
   `value` decimal(12,4) DEFAULT NULL COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Decimal Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Decimal Attribute Backend Table';
 
 --
 -- Dumping data for table `catalog_product_entity_decimal`
@@ -1464,6 +1492,16 @@ INSERT INTO `catalog_product_entity_decimal` VALUES(18, 4, 80, 0, 4, '0.5000');
 INSERT INTO `catalog_product_entity_decimal` VALUES(19, 4, 75, 0, 4, '750.0000');
 INSERT INTO `catalog_product_entity_decimal` VALUES(20, 4, 76, 0, 4, NULL);
 INSERT INTO `catalog_product_entity_decimal` VALUES(21, 4, 120, 0, 4, NULL);
+INSERT INTO `catalog_product_entity_decimal` VALUES(31, 4, 80, 0, 5, '1.0000');
+INSERT INTO `catalog_product_entity_decimal` VALUES(32, 4, 75, 0, 5, '100.0000');
+INSERT INTO `catalog_product_entity_decimal` VALUES(35, 4, 80, 0, 6, '1.0000');
+INSERT INTO `catalog_product_entity_decimal` VALUES(36, 4, 75, 0, 6, '100.0000');
+INSERT INTO `catalog_product_entity_decimal` VALUES(39, 4, 80, 0, 7, '1.0000');
+INSERT INTO `catalog_product_entity_decimal` VALUES(40, 4, 75, 0, 7, '100.0000');
+INSERT INTO `catalog_product_entity_decimal` VALUES(43, 4, 80, 0, 8, '1.0000');
+INSERT INTO `catalog_product_entity_decimal` VALUES(44, 4, 75, 0, 8, '100.0000');
+INSERT INTO `catalog_product_entity_decimal` VALUES(47, 4, 80, 0, 9, '1.0000');
+INSERT INTO `catalog_product_entity_decimal` VALUES(48, 4, 75, 0, 9, '100.0000');
 
 -- --------------------------------------------------------
 
@@ -1512,7 +1550,7 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity_int` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
   `value` int(11) DEFAULT NULL COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Integer Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Integer Attribute Backend Table';
 
 --
 -- Dumping data for table `catalog_product_entity_int`
@@ -1537,6 +1575,26 @@ INSERT INTO `catalog_product_entity_int` VALUES(16, 4, 102, 0, 4, 1);
 INSERT INTO `catalog_product_entity_int` VALUES(17, 4, 132, 0, 4, 4);
 INSERT INTO `catalog_product_entity_int` VALUES(18, 4, 121, 0, 4, 0);
 INSERT INTO `catalog_product_entity_int` VALUES(19, 4, 100, 0, 4, 0);
+INSERT INTO `catalog_product_entity_int` VALUES(21, 4, 96, 0, 5, 1);
+INSERT INTO `catalog_product_entity_int` VALUES(22, 4, 102, 0, 5, 4);
+INSERT INTO `catalog_product_entity_int` VALUES(23, 4, 96, 1, 5, 1);
+INSERT INTO `catalog_product_entity_int` VALUES(24, 4, 102, 1, 5, 4);
+INSERT INTO `catalog_product_entity_int` VALUES(25, 4, 96, 0, 6, 1);
+INSERT INTO `catalog_product_entity_int` VALUES(26, 4, 102, 0, 6, 4);
+INSERT INTO `catalog_product_entity_int` VALUES(27, 4, 96, 1, 6, 1);
+INSERT INTO `catalog_product_entity_int` VALUES(28, 4, 102, 1, 6, 4);
+INSERT INTO `catalog_product_entity_int` VALUES(29, 4, 96, 0, 7, 1);
+INSERT INTO `catalog_product_entity_int` VALUES(30, 4, 102, 0, 7, 4);
+INSERT INTO `catalog_product_entity_int` VALUES(31, 4, 96, 1, 7, 1);
+INSERT INTO `catalog_product_entity_int` VALUES(32, 4, 102, 1, 7, 4);
+INSERT INTO `catalog_product_entity_int` VALUES(33, 4, 96, 0, 8, 1);
+INSERT INTO `catalog_product_entity_int` VALUES(34, 4, 102, 0, 8, 4);
+INSERT INTO `catalog_product_entity_int` VALUES(35, 4, 96, 1, 8, 1);
+INSERT INTO `catalog_product_entity_int` VALUES(36, 4, 102, 1, 8, 4);
+INSERT INTO `catalog_product_entity_int` VALUES(37, 4, 96, 0, 9, 1);
+INSERT INTO `catalog_product_entity_int` VALUES(38, 4, 102, 0, 9, 4);
+INSERT INTO `catalog_product_entity_int` VALUES(39, 4, 96, 1, 9, 1);
+INSERT INTO `catalog_product_entity_int` VALUES(40, 4, 102, 1, 9, 4);
 
 -- --------------------------------------------------------
 
@@ -1599,7 +1657,7 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity_text` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
   `value` text COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Text Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Text Attribute Backend Table';
 
 --
 -- Dumping data for table `catalog_product_entity_text`
@@ -1621,6 +1679,26 @@ INSERT INTO `catalog_product_entity_text` VALUES(17, 4, 72, 0, 4, 'Lorem Ipsum i
 INSERT INTO `catalog_product_entity_text` VALUES(18, 4, 73, 0, 4, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.');
 INSERT INTO `catalog_product_entity_text` VALUES(19, 4, 83, 0, 4, NULL);
 INSERT INTO `catalog_product_entity_text` VALUES(20, 4, 106, 0, 4, NULL);
+INSERT INTO `catalog_product_entity_text` VALUES(27, 4, 72, 0, 5, 'Brand Product 1');
+INSERT INTO `catalog_product_entity_text` VALUES(28, 4, 73, 0, 5, 'Brand Product 1');
+INSERT INTO `catalog_product_entity_text` VALUES(29, 4, 72, 1, 5, 'Brand Product 1');
+INSERT INTO `catalog_product_entity_text` VALUES(30, 4, 73, 1, 5, 'Brand Product 1');
+INSERT INTO `catalog_product_entity_text` VALUES(31, 4, 72, 0, 6, 'Brand Product 2');
+INSERT INTO `catalog_product_entity_text` VALUES(32, 4, 73, 0, 6, 'Brand Product 2');
+INSERT INTO `catalog_product_entity_text` VALUES(33, 4, 72, 1, 6, 'Brand Product 2');
+INSERT INTO `catalog_product_entity_text` VALUES(34, 4, 73, 1, 6, 'Brand Product 2');
+INSERT INTO `catalog_product_entity_text` VALUES(35, 4, 72, 0, 7, 'Brand Product 3');
+INSERT INTO `catalog_product_entity_text` VALUES(36, 4, 73, 0, 7, 'Brand Product 3');
+INSERT INTO `catalog_product_entity_text` VALUES(37, 4, 72, 1, 7, 'Brand Product 3');
+INSERT INTO `catalog_product_entity_text` VALUES(38, 4, 73, 1, 7, 'Brand Product 3');
+INSERT INTO `catalog_product_entity_text` VALUES(39, 4, 72, 0, 8, 'Brand Product 4');
+INSERT INTO `catalog_product_entity_text` VALUES(40, 4, 73, 0, 8, 'Brand Product 4');
+INSERT INTO `catalog_product_entity_text` VALUES(41, 4, 72, 1, 8, 'Brand Product 4');
+INSERT INTO `catalog_product_entity_text` VALUES(42, 4, 73, 1, 8, 'Brand Product 4');
+INSERT INTO `catalog_product_entity_text` VALUES(43, 4, 72, 0, 9, 'Brand Product 5');
+INSERT INTO `catalog_product_entity_text` VALUES(44, 4, 73, 0, 9, 'Brand Product 5');
+INSERT INTO `catalog_product_entity_text` VALUES(45, 4, 72, 1, 9, 'Brand Product 5');
+INSERT INTO `catalog_product_entity_text` VALUES(46, 4, 73, 1, 9, 'Brand Product 5');
 
 -- --------------------------------------------------------
 
@@ -1653,7 +1731,7 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity_varchar` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
   `value` varchar(255) DEFAULT NULL COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=122 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Varchar Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=162 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Varchar Attribute Backend Table';
 
 --
 -- Dumping data for table `catalog_product_entity_varchar`
@@ -1735,6 +1813,41 @@ INSERT INTO `catalog_product_entity_varchar` VALUES(91, 4, 113, 0, 4, NULL);
 INSERT INTO `catalog_product_entity_varchar` VALUES(92, 4, 114, 0, 4, NULL);
 INSERT INTO `catalog_product_entity_varchar` VALUES(93, 4, 98, 1, 4, 'iphone-6-green.html');
 INSERT INTO `catalog_product_entity_varchar` VALUES(94, 4, 98, 0, 4, 'iphone-6-green.html');
+INSERT INTO `catalog_product_entity_varchar` VALUES(122, 4, 71, 0, 5, 'Brand Product 1');
+INSERT INTO `catalog_product_entity_varchar` VALUES(123, 4, 133, 0, 5, '8');
+INSERT INTO `catalog_product_entity_varchar` VALUES(124, 4, 71, 1, 5, 'Brand Product 1');
+INSERT INTO `catalog_product_entity_varchar` VALUES(125, 4, 97, 1, 5, 'brand-product-1');
+INSERT INTO `catalog_product_entity_varchar` VALUES(127, 4, 97, 0, 5, 'brand-product-1');
+INSERT INTO `catalog_product_entity_varchar` VALUES(128, 4, 98, 1, 5, 'brand-product-1.html');
+INSERT INTO `catalog_product_entity_varchar` VALUES(129, 4, 98, 0, 5, 'brand-product-1.html');
+INSERT INTO `catalog_product_entity_varchar` VALUES(130, 4, 71, 0, 6, 'Brand Product 2');
+INSERT INTO `catalog_product_entity_varchar` VALUES(131, 4, 133, 0, 6, '3');
+INSERT INTO `catalog_product_entity_varchar` VALUES(132, 4, 71, 1, 6, 'Brand Product 2');
+INSERT INTO `catalog_product_entity_varchar` VALUES(133, 4, 97, 1, 6, 'brand-product-2');
+INSERT INTO `catalog_product_entity_varchar` VALUES(135, 4, 97, 0, 6, 'brand-product-2');
+INSERT INTO `catalog_product_entity_varchar` VALUES(136, 4, 98, 1, 6, 'brand-product-2.html');
+INSERT INTO `catalog_product_entity_varchar` VALUES(137, 4, 98, 0, 6, 'brand-product-2.html');
+INSERT INTO `catalog_product_entity_varchar` VALUES(138, 4, 71, 0, 7, 'Brand Product 3');
+INSERT INTO `catalog_product_entity_varchar` VALUES(139, 4, 133, 0, 7, '5');
+INSERT INTO `catalog_product_entity_varchar` VALUES(140, 4, 71, 1, 7, 'Brand Product 3');
+INSERT INTO `catalog_product_entity_varchar` VALUES(141, 4, 97, 1, 7, 'brand-product-3');
+INSERT INTO `catalog_product_entity_varchar` VALUES(143, 4, 97, 0, 7, 'brand-product-3');
+INSERT INTO `catalog_product_entity_varchar` VALUES(144, 4, 98, 1, 7, 'brand-product-3.html');
+INSERT INTO `catalog_product_entity_varchar` VALUES(145, 4, 98, 0, 7, 'brand-product-3.html');
+INSERT INTO `catalog_product_entity_varchar` VALUES(146, 4, 71, 0, 8, 'Brand Product 4');
+INSERT INTO `catalog_product_entity_varchar` VALUES(147, 4, 133, 0, 8, '3');
+INSERT INTO `catalog_product_entity_varchar` VALUES(148, 4, 71, 1, 8, 'Brand Product 4');
+INSERT INTO `catalog_product_entity_varchar` VALUES(149, 4, 97, 1, 8, 'brand-product-4');
+INSERT INTO `catalog_product_entity_varchar` VALUES(151, 4, 97, 0, 8, 'brand-product-4');
+INSERT INTO `catalog_product_entity_varchar` VALUES(152, 4, 98, 1, 8, 'brand-product-4.html');
+INSERT INTO `catalog_product_entity_varchar` VALUES(153, 4, 98, 0, 8, 'brand-product-4.html');
+INSERT INTO `catalog_product_entity_varchar` VALUES(154, 4, 71, 0, 9, 'Brand Product 5');
+INSERT INTO `catalog_product_entity_varchar` VALUES(155, 4, 133, 0, 9, '3');
+INSERT INTO `catalog_product_entity_varchar` VALUES(156, 4, 71, 1, 9, 'Brand Product 5');
+INSERT INTO `catalog_product_entity_varchar` VALUES(157, 4, 97, 1, 9, 'brand-product-5');
+INSERT INTO `catalog_product_entity_varchar` VALUES(159, 4, 97, 0, 9, 'brand-product-5');
+INSERT INTO `catalog_product_entity_varchar` VALUES(160, 4, 98, 1, 9, 'brand-product-5.html');
+INSERT INTO `catalog_product_entity_varchar` VALUES(161, 4, 98, 0, 9, 'brand-product-5.html');
 
 -- --------------------------------------------------------
 
@@ -1826,12 +1939,6 @@ CREATE TABLE IF NOT EXISTS `catalog_product_index_eav_tmp` (
   `value` int(10) unsigned NOT NULL COMMENT 'Value'
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8 COMMENT='Catalog Product EAV Indexer Temp Table';
 
---
--- Dumping data for table `catalog_product_index_eav_tmp`
---
-
-INSERT INTO `catalog_product_index_eav_tmp` VALUES(1, 121, 1, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -1886,6 +1993,26 @@ INSERT INTO `catalog_product_index_price` VALUES(4, 0, 1, 0, '750.0000', '750.00
 INSERT INTO `catalog_product_index_price` VALUES(4, 1, 1, 0, '750.0000', '750.0000', '750.0000', '750.0000', NULL, NULL);
 INSERT INTO `catalog_product_index_price` VALUES(4, 2, 1, 0, '750.0000', '750.0000', '750.0000', '750.0000', NULL, NULL);
 INSERT INTO `catalog_product_index_price` VALUES(4, 3, 1, 0, '750.0000', '750.0000', '750.0000', '750.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(5, 0, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(5, 1, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(5, 2, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(5, 3, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(6, 0, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(6, 1, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(6, 2, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(6, 3, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(7, 0, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(7, 1, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(7, 2, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(7, 3, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(8, 0, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(8, 1, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(8, 2, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(8, 3, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(9, 0, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(9, 1, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(9, 2, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price` VALUES(9, 3, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2277,14 +2404,10 @@ CREATE TABLE IF NOT EXISTS `catalog_product_index_price_tmp` (
 -- Dumping data for table `catalog_product_index_price_tmp`
 --
 
-INSERT INTO `catalog_product_index_price_tmp` VALUES(2, 0, 1, 0, '750.0000', '750.0000', '750.0000', '750.0000', NULL, NULL);
-INSERT INTO `catalog_product_index_price_tmp` VALUES(2, 1, 1, 0, '750.0000', '750.0000', '750.0000', '750.0000', NULL, NULL);
-INSERT INTO `catalog_product_index_price_tmp` VALUES(2, 2, 1, 0, '750.0000', '750.0000', '750.0000', '750.0000', NULL, NULL);
-INSERT INTO `catalog_product_index_price_tmp` VALUES(2, 3, 1, 0, '750.0000', '750.0000', '750.0000', '750.0000', NULL, NULL);
-INSERT INTO `catalog_product_index_price_tmp` VALUES(1, 0, 1, 0, '750.0000', '750.0000', '780.0000', '850.0000', NULL, NULL);
-INSERT INTO `catalog_product_index_price_tmp` VALUES(1, 1, 1, 0, '750.0000', '750.0000', '780.0000', '850.0000', NULL, NULL);
-INSERT INTO `catalog_product_index_price_tmp` VALUES(1, 2, 1, 0, '750.0000', '750.0000', '780.0000', '850.0000', NULL, NULL);
-INSERT INTO `catalog_product_index_price_tmp` VALUES(1, 3, 1, 0, '750.0000', '750.0000', '780.0000', '850.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price_tmp` VALUES(9, 0, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price_tmp` VALUES(9, 1, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price_tmp` VALUES(9, 2, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price_tmp` VALUES(9, 3, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2638,6 +2761,11 @@ INSERT INTO `catalog_product_website` VALUES(1, 1);
 INSERT INTO `catalog_product_website` VALUES(2, 1);
 INSERT INTO `catalog_product_website` VALUES(3, 1);
 INSERT INTO `catalog_product_website` VALUES(4, 1);
+INSERT INTO `catalog_product_website` VALUES(5, 1);
+INSERT INTO `catalog_product_website` VALUES(6, 1);
+INSERT INTO `catalog_product_website` VALUES(7, 1);
+INSERT INTO `catalog_product_website` VALUES(8, 1);
+INSERT INTO `catalog_product_website` VALUES(9, 1);
 
 -- --------------------------------------------------------
 
@@ -2840,7 +2968,7 @@ CREATE TABLE IF NOT EXISTS `core_config_data` (
   `scope_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Config Scope Id',
   `path` varchar(255) NOT NULL DEFAULT 'general' COMMENT 'Config Path',
   `value` text COMMENT 'Config Value'
-) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8 COMMENT='Config Data';
+) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=utf8 COMMENT='Config Data';
 
 --
 -- Dumping data for table `core_config_data`
@@ -3009,7 +3137,7 @@ CREATE TABLE IF NOT EXISTS `core_flag` (
 -- Dumping data for table `core_flag`
 --
 
-INSERT INTO `core_flag` VALUES(1, 'admin_notification_survey', 0, 'a:1:{s:13:"survey_viewed";b:1;}', '2015-05-03 20:20:11');
+INSERT INTO `core_flag` VALUES(1, 'admin_notification_survey', 0, 'a:1:{s:13:"survey_viewed";b:1;}', '2015-05-03 21:39:02');
 
 -- --------------------------------------------------------
 
@@ -3102,13 +3230,17 @@ INSERT INTO `core_resource` VALUES('rating_setup', '1.6.0.0', '1.6.0.0');
 INSERT INTO `core_resource` VALUES('reports_setup', '1.6.0.0.1', '1.6.0.0.1');
 INSERT INTO `core_resource` VALUES('review_setup', '1.6.0.0', '1.6.0.0');
 INSERT INTO `core_resource` VALUES('salesrule_setup', '1.6.0.3', '1.6.0.3');
+INSERT INTO `core_resource` VALUES('salestaff_setup', '0.1.0', '0.1.0');
 INSERT INTO `core_resource` VALUES('sales_setup', '1.6.0.8', '1.6.0.8');
 INSERT INTO `core_resource` VALUES('sendfriend_setup', '1.6.0.0', '1.6.0.0');
 INSERT INTO `core_resource` VALUES('shipping_setup', '1.6.0.0', '1.6.0.0');
 INSERT INTO `core_resource` VALUES('sitemap_setup', '1.6.0.0', '1.6.0.0');
+INSERT INTO `core_resource` VALUES('smashingmagazine_branddirectory_setup', '0.0.2', '0.0.2');
+INSERT INTO `core_resource` VALUES('smashingmagazine_brandexample_setup', '0.0.2', '0.0.2');
 INSERT INTO `core_resource` VALUES('tag_setup', '1.6.0.0', '1.6.0.0');
 INSERT INTO `core_resource` VALUES('tax_setup', '1.6.0.4', '1.6.0.4');
 INSERT INTO `core_resource` VALUES('usa_setup', '1.6.0.3', '1.6.0.3');
+INSERT INTO `core_resource` VALUES('websgle_blog_setup', '0.1.0', '0.1.0');
 INSERT INTO `core_resource` VALUES('weee_setup', '1.6.0.0', '1.6.0.0');
 INSERT INTO `core_resource` VALUES('widget_setup', '1.6.0.0', '1.6.0.0');
 INSERT INTO `core_resource` VALUES('wishlist_setup', '1.6.0.0', '1.6.0.0');
@@ -3206,7 +3338,7 @@ CREATE TABLE IF NOT EXISTS `core_url_rewrite` (
   `description` varchar(255) DEFAULT NULL COMMENT 'Deascription',
   `category_id` int(10) unsigned DEFAULT NULL COMMENT 'Category Id',
   `product_id` int(10) unsigned DEFAULT NULL COMMENT 'Product Id'
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Url Rewrites';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='Url Rewrites';
 
 --
 -- Dumping data for table `core_url_rewrite`
@@ -3218,6 +3350,11 @@ INSERT INTO `core_url_rewrite` VALUES(4, 1, 'product/1', 'iphone-6.html', 'catal
 INSERT INTO `core_url_rewrite` VALUES(5, 1, 'product/2', 'iphone-6s-gold.html', 'catalog/product/view/id/2', 1, NULL, NULL, NULL, 2);
 INSERT INTO `core_url_rewrite` VALUES(6, 1, 'product/3', 'iphone-6-red.html', 'catalog/product/view/id/3', 1, NULL, NULL, NULL, 3);
 INSERT INTO `core_url_rewrite` VALUES(7, 1, 'product/4', 'iphone-6-green.html', 'catalog/product/view/id/4', 1, NULL, NULL, NULL, 4);
+INSERT INTO `core_url_rewrite` VALUES(8, 1, 'product/5', 'brand-product-1.html', 'catalog/product/view/id/5', 1, NULL, NULL, NULL, 5);
+INSERT INTO `core_url_rewrite` VALUES(9, 1, 'product/6', 'brand-product-2.html', 'catalog/product/view/id/6', 1, NULL, NULL, NULL, 6);
+INSERT INTO `core_url_rewrite` VALUES(10, 1, 'product/7', 'brand-product-3.html', 'catalog/product/view/id/7', 1, NULL, NULL, NULL, 7);
+INSERT INTO `core_url_rewrite` VALUES(11, 1, 'product/8', 'brand-product-4.html', 'catalog/product/view/id/8', 1, NULL, NULL, NULL, 8);
+INSERT INTO `core_url_rewrite` VALUES(12, 1, 'product/9', 'brand-product-5.html', 'catalog/product/view/id/9', 1, NULL, NULL, NULL, 9);
 
 -- --------------------------------------------------------
 
@@ -5359,7 +5496,7 @@ CREATE TABLE IF NOT EXISTS `eav_attribute` (
   `default_value` text COMMENT 'Default Value',
   `is_unique` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Defines Is Unique',
   `note` varchar(255) DEFAULT NULL COMMENT 'Note'
-) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=utf8 COMMENT='Eav Attribute';
+) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8 COMMENT='Eav Attribute';
 
 --
 -- Dumping data for table `eav_attribute`
@@ -5497,6 +5634,12 @@ INSERT INTO `eav_attribute` VALUES(129, 4, 'samples_title', NULL, NULL, 'varchar
 INSERT INTO `eav_attribute` VALUES(130, 4, 'links_title', NULL, NULL, 'varchar', NULL, NULL, NULL, 'Links title', NULL, NULL, 1, 0, NULL, 0, NULL);
 INSERT INTO `eav_attribute` VALUES(131, 4, 'links_exist', NULL, NULL, 'int', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '0', 0, NULL);
 INSERT INTO `eav_attribute` VALUES(132, 4, 'acolor', NULL, NULL, 'int', NULL, NULL, 'select', 'Color', NULL, 'eav/entity_attribute_source_table', 0, 1, '', 0, NULL);
+INSERT INTO `eav_attribute` VALUES(133, 4, 'brand_id', NULL, NULL, 'varchar', NULL, NULL, 'select', 'Brand', NULL, 'smashingmagazine_brandexample/source_brand', 1, 0, NULL, 0, NULL);
+INSERT INTO `eav_attribute` VALUES(134, 9, 'title', NULL, NULL, 'varchar', NULL, NULL, 'text', 'Title', NULL, NULL, 1, 0, NULL, 0, NULL);
+INSERT INTO `eav_attribute` VALUES(135, 9, 'url', NULL, NULL, 'varchar', NULL, NULL, 'text', 'URL', NULL, NULL, 1, 0, NULL, 0, NULL);
+INSERT INTO `eav_attribute` VALUES(136, 9, 'content', NULL, NULL, 'text', NULL, NULL, 'text', 'Content', NULL, NULL, 1, 0, NULL, 0, NULL);
+INSERT INTO `eav_attribute` VALUES(137, 9, 'image', NULL, NULL, 'varchar', NULL, NULL, 'text', 'Image', NULL, NULL, 1, 0, NULL, 0, NULL);
+INSERT INTO `eav_attribute` VALUES(138, 9, 'is_active', NULL, NULL, 'int', NULL, NULL, 'text', 'Is Active', NULL, NULL, 0, 0, NULL, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -5511,7 +5654,7 @@ CREATE TABLE IF NOT EXISTS `eav_attribute_group` (
   `attribute_group_name` varchar(255) DEFAULT NULL COMMENT 'Attribute Group Name',
   `sort_order` smallint(6) NOT NULL DEFAULT '0' COMMENT 'Sort Order',
   `default_id` smallint(5) unsigned DEFAULT '0' COMMENT 'Default Id'
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Group';
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Group';
 
 --
 -- Dumping data for table `eav_attribute_group`
@@ -5541,6 +5684,7 @@ INSERT INTO `eav_attribute_group` VALUES(21, 9, 'Images', 4, 0);
 INSERT INTO `eav_attribute_group` VALUES(22, 9, 'Meta Information', 3, 0);
 INSERT INTO `eav_attribute_group` VALUES(23, 9, 'Prices', 2, 0);
 INSERT INTO `eav_attribute_group` VALUES(24, 9, 'General', 1, 1);
+INSERT INTO `eav_attribute_group` VALUES(25, 10, 'General', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -5627,7 +5771,7 @@ CREATE TABLE IF NOT EXISTS `eav_attribute_set` (
   `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
   `attribute_set_name` varchar(255) DEFAULT NULL COMMENT 'Attribute Set Name',
   `sort_order` smallint(6) NOT NULL DEFAULT '0' COMMENT 'Sort Order'
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Set';
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Set';
 
 --
 -- Dumping data for table `eav_attribute_set`
@@ -5642,6 +5786,7 @@ INSERT INTO `eav_attribute_set` VALUES(6, 6, 'Default', 1);
 INSERT INTO `eav_attribute_set` VALUES(7, 7, 'Default', 1);
 INSERT INTO `eav_attribute_set` VALUES(8, 8, 'Default', 1);
 INSERT INTO `eav_attribute_set` VALUES(9, 4, 'Mobile', 0);
+INSERT INTO `eav_attribute_set` VALUES(10, 9, 'Default', 1);
 
 -- --------------------------------------------------------
 
@@ -5676,7 +5821,7 @@ CREATE TABLE IF NOT EXISTS `eav_entity_attribute` (
   `attribute_group_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Group Id',
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
   `sort_order` smallint(6) NOT NULL DEFAULT '0' COMMENT 'Sort Order'
-) ENGINE=InnoDB AUTO_INCREMENT=330 DEFAULT CHARSET=utf8 COMMENT='Eav Entity Attributes';
+) ENGINE=InnoDB AUTO_INCREMENT=337 DEFAULT CHARSET=utf8 COMMENT='Eav Entity Attributes';
 
 --
 -- Dumping data for table `eav_entity_attribute`
@@ -5871,6 +6016,13 @@ INSERT INTO `eav_entity_attribute` VALUES(323, 4, 9, 19, 106, 4);
 INSERT INTO `eav_entity_attribute` VALUES(325, 4, 9, 19, 107, 5);
 INSERT INTO `eav_entity_attribute` VALUES(327, 4, 9, 19, 109, 6);
 INSERT INTO `eav_entity_attribute` VALUES(329, 4, 9, 18, 122, 1);
+INSERT INTO `eav_entity_attribute` VALUES(330, 4, 4, 7, 133, 30);
+INSERT INTO `eav_entity_attribute` VALUES(331, 4, 9, 24, 133, 30);
+INSERT INTO `eav_entity_attribute` VALUES(332, 9, 10, 25, 134, 10);
+INSERT INTO `eav_entity_attribute` VALUES(333, 9, 10, 25, 135, 10);
+INSERT INTO `eav_entity_attribute` VALUES(334, 9, 10, 25, 136, 20);
+INSERT INTO `eav_entity_attribute` VALUES(335, 9, 10, 25, 137, 30);
+INSERT INTO `eav_entity_attribute` VALUES(336, 9, 10, 25, 138, 50);
 
 -- --------------------------------------------------------
 
@@ -5975,7 +6127,7 @@ CREATE TABLE IF NOT EXISTS `eav_entity_type` (
   `increment_pad_char` varchar(1) NOT NULL DEFAULT '0' COMMENT 'Increment Pad Char',
   `additional_attribute_table` varchar(255) DEFAULT '' COMMENT 'Additional Attribute Table',
   `entity_attribute_collection` varchar(255) DEFAULT NULL COMMENT 'Entity Attribute Collection'
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='Eav Entity Type';
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Eav Entity Type';
 
 --
 -- Dumping data for table `eav_entity_type`
@@ -5989,6 +6141,7 @@ INSERT INTO `eav_entity_type` VALUES(5, 'order', 'sales/order', NULL, 'sales/ord
 INSERT INTO `eav_entity_type` VALUES(6, 'invoice', 'sales/order_invoice', NULL, 'sales/invoice', NULL, NULL, 1, 'default', 0, 'eav/entity_increment_numeric', 1, 8, '0', NULL, NULL);
 INSERT INTO `eav_entity_type` VALUES(7, 'creditmemo', 'sales/order_creditmemo', NULL, 'sales/creditmemo', NULL, NULL, 1, 'default', 0, 'eav/entity_increment_numeric', 1, 8, '0', NULL, NULL);
 INSERT INTO `eav_entity_type` VALUES(8, 'shipment', 'sales/order_shipment', NULL, 'sales/shipment', NULL, NULL, 1, 'default', 0, 'eav/entity_increment_numeric', 1, 8, '0', NULL, NULL);
+INSERT INTO `eav_entity_type` VALUES(9, 'websgle_blog_post', 'websgle_blog/post', NULL, 'websgle_blog/post', NULL, NULL, 1, 'default', 10, NULL, 0, 8, '0', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -6214,7 +6367,7 @@ CREATE TABLE IF NOT EXISTS `index_event` (
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Creation Time',
   `old_data` mediumtext COMMENT 'Old Data',
   `new_data` mediumtext COMMENT 'New Data'
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COMMENT='Index Event';
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COMMENT='Index Event';
 
 --
 -- Dumping data for table `index_event`
@@ -6236,6 +6389,16 @@ INSERT INTO `index_event` VALUES(13, 'save', 'catalog_product', 3, '2015-05-03 2
 INSERT INTO `index_event` VALUES(14, 'save', 'cataloginventory_stock_item', 4, '2015-05-03 20:33:42', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}');
 INSERT INTO `index_event` VALUES(15, 'catalog_reindex_price', 'catalog_product', 4, '2015-05-03 20:33:42', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}');
 INSERT INTO `index_event` VALUES(16, 'save', 'catalog_product', 4, '2015-05-03 20:33:43', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}');
+INSERT INTO `index_event` VALUES(17, 'save', 'cataloginventory_stock_item', 5, '2015-05-03 21:38:20', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}');
+INSERT INTO `index_event` VALUES(18, 'save', 'catalog_product', 5, '2015-05-03 21:38:23', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}');
+INSERT INTO `index_event` VALUES(19, 'save', 'cataloginventory_stock_item', 6, '2015-05-03 21:38:23', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}');
+INSERT INTO `index_event` VALUES(20, 'save', 'catalog_product', 6, '2015-05-03 21:38:24', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}');
+INSERT INTO `index_event` VALUES(21, 'save', 'cataloginventory_stock_item', 7, '2015-05-03 21:38:24', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}');
+INSERT INTO `index_event` VALUES(22, 'save', 'catalog_product', 7, '2015-05-03 21:38:24', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}');
+INSERT INTO `index_event` VALUES(23, 'save', 'cataloginventory_stock_item', 8, '2015-05-03 21:38:25', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}');
+INSERT INTO `index_event` VALUES(24, 'save', 'catalog_product', 8, '2015-05-03 21:38:25', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}');
+INSERT INTO `index_event` VALUES(25, 'save', 'cataloginventory_stock_item', 9, '2015-05-03 21:38:26', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:0;}');
+INSERT INTO `index_event` VALUES(26, 'save', 'catalog_product', 9, '2015-05-03 21:38:26', NULL, 'a:5:{s:35:"cataloginventory_stock_match_result";b:1;s:34:"catalog_product_price_match_result";b:1;s:24:"catalog_url_match_result";b:1;s:37:"catalog_category_product_match_result";b:1;s:35:"catalogsearch_fulltext_match_result";b:1;}');
 
 -- --------------------------------------------------------
 
@@ -6257,15 +6420,15 @@ CREATE TABLE IF NOT EXISTS `index_process` (
 -- Dumping data for table `index_process`
 --
 
-INSERT INTO `index_process` VALUES(1, 'catalog_product_attribute', 'require_reindex', '2015-05-03 20:36:22', '2015-05-03 20:36:22', 'real_time');
-INSERT INTO `index_process` VALUES(2, 'catalog_product_price', 'require_reindex', '2015-05-03 20:36:22', '2015-05-03 20:36:22', 'real_time');
-INSERT INTO `index_process` VALUES(3, 'catalog_url', 'require_reindex', '2015-05-03 20:36:22', '2015-05-03 20:36:22', 'real_time');
+INSERT INTO `index_process` VALUES(1, 'catalog_product_attribute', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
+INSERT INTO `index_process` VALUES(2, 'catalog_product_price', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
+INSERT INTO `index_process` VALUES(3, 'catalog_url', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
 INSERT INTO `index_process` VALUES(4, 'catalog_product_flat', 'require_reindex', NULL, NULL, 'real_time');
 INSERT INTO `index_process` VALUES(5, 'catalog_category_flat', 'require_reindex', NULL, NULL, 'real_time');
-INSERT INTO `index_process` VALUES(6, 'catalog_category_product', 'require_reindex', '2015-05-03 20:36:22', '2015-05-03 20:36:22', 'real_time');
-INSERT INTO `index_process` VALUES(7, 'catalogsearch_fulltext', 'require_reindex', '2015-05-03 20:36:22', '2015-05-03 20:36:22', 'real_time');
-INSERT INTO `index_process` VALUES(8, 'cataloginventory_stock', 'require_reindex', '2015-05-03 20:36:22', '2015-05-03 20:36:22', 'real_time');
-INSERT INTO `index_process` VALUES(9, 'tag_summary', 'require_reindex', '2015-05-03 20:36:22', '2015-05-03 20:36:22', 'real_time');
+INSERT INTO `index_process` VALUES(6, 'catalog_category_product', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
+INSERT INTO `index_process` VALUES(7, 'catalogsearch_fulltext', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
+INSERT INTO `index_process` VALUES(8, 'cataloginventory_stock', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
+INSERT INTO `index_process` VALUES(9, 'tag_summary', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
 
 -- --------------------------------------------------------
 
@@ -6417,6 +6580,10 @@ INSERT INTO `log_url` VALUES(44, 1, '2015-05-03 20:53:10');
 INSERT INTO `log_url` VALUES(45, 1, '2015-05-03 21:02:18');
 INSERT INTO `log_url` VALUES(46, 2, '2015-05-03 21:14:25');
 INSERT INTO `log_url` VALUES(47, 1, '2015-05-03 21:24:25');
+INSERT INTO `log_url` VALUES(48, 1, '2015-05-03 21:40:51');
+INSERT INTO `log_url` VALUES(49, 1, '2015-05-03 21:40:54');
+INSERT INTO `log_url` VALUES(50, 1, '2015-05-03 21:40:59');
+INSERT INTO `log_url` VALUES(51, 1, '2015-05-03 21:41:00');
 
 -- --------------------------------------------------------
 
@@ -6429,7 +6596,7 @@ CREATE TABLE IF NOT EXISTS `log_url_info` (
 `url_id` bigint(20) unsigned NOT NULL COMMENT 'URL ID',
   `url` varchar(255) DEFAULT NULL COMMENT 'URL',
   `referer` varchar(255) DEFAULT NULL COMMENT 'Referrer'
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8 COMMENT='Log URL Info Table';
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COMMENT='Log URL Info Table';
 
 --
 -- Dumping data for table `log_url_info`
@@ -6482,6 +6649,10 @@ INSERT INTO `log_url_info` VALUES(44, 'http://magentoprojects.com/index.php/chec
 INSERT INTO `log_url_info` VALUES(45, 'http://magentoprojects.com/index.php/ourteams', NULL);
 INSERT INTO `log_url_info` VALUES(46, 'http://magentoprojects.com/index.php/ourteams', NULL);
 INSERT INTO `log_url_info` VALUES(47, 'http://magentoprojects.com/index.php/', 'http://magentoprojects.com/index.php/ourteams');
+INSERT INTO `log_url_info` VALUES(48, 'http://magentoprojects.com/index.php/', NULL);
+INSERT INTO `log_url_info` VALUES(49, 'http://magentoprojects.com/index.php/catalog/category/view/id/3', 'http://magentoprojects.com/index.php/');
+INSERT INTO `log_url_info` VALUES(50, 'http://magentoprojects.com/index.php/catalogsearch/result/?q=cell', 'http://magentoprojects.com/index.php/cell-phone.html');
+INSERT INTO `log_url_info` VALUES(51, 'http://magentoprojects.com/index.php/catalogsearch/ajax/suggest/?q=cell', 'http://magentoprojects.com/index.php/cell-phone.html');
 
 -- --------------------------------------------------------
 
@@ -6503,7 +6674,7 @@ CREATE TABLE IF NOT EXISTS `log_visitor` (
 -- Dumping data for table `log_visitor`
 --
 
-INSERT INTO `log_visitor` VALUES(1, 'ibkn5hn89btc31ntnkdaacrq07', '2015-05-03 20:21:16', '2015-05-03 21:24:25', 47, 1);
+INSERT INTO `log_visitor` VALUES(1, 'ibkn5hn89btc31ntnkdaacrq07', '2015-05-03 20:21:16', '2015-05-03 21:41:00', 51, 1);
 INSERT INTO `log_visitor` VALUES(2, 'q3c03lgg6ubo4gde69pb5magk5', '2015-05-03 21:14:25', '2015-05-03 21:14:25', 46, 1);
 
 -- --------------------------------------------------------
@@ -11392,7 +11563,7 @@ ALTER TABLE `wishlist_item_option`
 -- AUTO_INCREMENT for table `adminnotification_inbox`
 --
 ALTER TABLE `adminnotification_inbox`
-MODIFY `notification_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Notification id',AUTO_INCREMENT=89;
+MODIFY `notification_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Notification id',AUTO_INCREMENT=91;
 --
 -- AUTO_INCREMENT for table `admin_assert`
 --
@@ -11402,7 +11573,7 @@ MODIFY `assert_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Assert ID';
 -- AUTO_INCREMENT for table `admin_role`
 --
 ALTER TABLE `admin_role`
-MODIFY `role_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Role ID',AUTO_INCREMENT=3;
+MODIFY `role_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Role ID',AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `admin_rule`
 --
@@ -11462,7 +11633,7 @@ MODIFY `stock_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Stock Id
 -- AUTO_INCREMENT for table `cataloginventory_stock_item`
 --
 ALTER TABLE `cataloginventory_stock_item`
-MODIFY `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Item Id',AUTO_INCREMENT=5;
+MODIFY `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Item Id',AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `catalogrule`
 --
@@ -11482,7 +11653,7 @@ MODIFY `rule_product_price_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 
 -- AUTO_INCREMENT for table `catalogsearch_fulltext`
 --
 ALTER TABLE `catalogsearch_fulltext`
-MODIFY `fulltext_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',AUTO_INCREMENT=5;
+MODIFY `fulltext_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `catalogsearch_query`
 --
@@ -11542,7 +11713,7 @@ MODIFY `selection_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Selectio
 -- AUTO_INCREMENT for table `catalog_product_entity`
 --
 ALTER TABLE `catalog_product_entity`
-MODIFY `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',AUTO_INCREMENT=5;
+MODIFY `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `catalog_product_entity_datetime`
 --
@@ -11552,7 +11723,7 @@ MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREM
 -- AUTO_INCREMENT for table `catalog_product_entity_decimal`
 --
 ALTER TABLE `catalog_product_entity_decimal`
-MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=31;
+MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT for table `catalog_product_entity_gallery`
 --
@@ -11567,7 +11738,7 @@ MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID';
 -- AUTO_INCREMENT for table `catalog_product_entity_int`
 --
 ALTER TABLE `catalog_product_entity_int`
-MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=21;
+MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `catalog_product_entity_media_gallery`
 --
@@ -11577,7 +11748,7 @@ MODIFY `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AU
 -- AUTO_INCREMENT for table `catalog_product_entity_text`
 --
 ALTER TABLE `catalog_product_entity_text`
-MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=27;
+MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=47;
 --
 -- AUTO_INCREMENT for table `catalog_product_entity_tier_price`
 --
@@ -11587,7 +11758,7 @@ MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID';
 -- AUTO_INCREMENT for table `catalog_product_entity_varchar`
 --
 ALTER TABLE `catalog_product_entity_varchar`
-MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=122;
+MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=162;
 --
 -- AUTO_INCREMENT for table `catalog_product_link`
 --
@@ -11687,7 +11858,7 @@ MODIFY `page_id` smallint(6) NOT NULL AUTO_INCREMENT COMMENT 'Page ID',AUTO_INCR
 -- AUTO_INCREMENT for table `core_config_data`
 --
 ALTER TABLE `core_config_data`
-MODIFY `config_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Config Id',AUTO_INCREMENT=88;
+MODIFY `config_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Config Id',AUTO_INCREMENT=96;
 --
 -- AUTO_INCREMENT for table `core_email_queue`
 --
@@ -11737,7 +11908,7 @@ MODIFY `key_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Key Id of Tran
 -- AUTO_INCREMENT for table `core_url_rewrite`
 --
 ALTER TABLE `core_url_rewrite`
-MODIFY `url_rewrite_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rewrite Id',AUTO_INCREMENT=8;
+MODIFY `url_rewrite_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Rewrite Id',AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `core_variable`
 --
@@ -11927,12 +12098,12 @@ MODIFY `title_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Title ID';
 -- AUTO_INCREMENT for table `eav_attribute`
 --
 ALTER TABLE `eav_attribute`
-MODIFY `attribute_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Id',AUTO_INCREMENT=133;
+MODIFY `attribute_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Id',AUTO_INCREMENT=139;
 --
 -- AUTO_INCREMENT for table `eav_attribute_group`
 --
 ALTER TABLE `eav_attribute_group`
-MODIFY `attribute_group_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Group Id',AUTO_INCREMENT=25;
+MODIFY `attribute_group_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Group Id',AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `eav_attribute_label`
 --
@@ -11952,7 +12123,7 @@ MODIFY `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value Id',AU
 -- AUTO_INCREMENT for table `eav_attribute_set`
 --
 ALTER TABLE `eav_attribute_set`
-MODIFY `attribute_set_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Set Id',AUTO_INCREMENT=10;
+MODIFY `attribute_set_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Set Id',AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `eav_entity`
 --
@@ -11962,7 +12133,7 @@ MODIFY `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id';
 -- AUTO_INCREMENT for table `eav_entity_attribute`
 --
 ALTER TABLE `eav_entity_attribute`
-MODIFY `entity_attribute_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Attribute Id',AUTO_INCREMENT=330;
+MODIFY `entity_attribute_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Attribute Id',AUTO_INCREMENT=337;
 --
 -- AUTO_INCREMENT for table `eav_entity_datetime`
 --
@@ -11992,7 +12163,7 @@ MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id';
 -- AUTO_INCREMENT for table `eav_entity_type`
 --
 ALTER TABLE `eav_entity_type`
-MODIFY `entity_type_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Type Id',AUTO_INCREMENT=9;
+MODIFY `entity_type_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Type Id',AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `eav_entity_varchar`
 --
@@ -12027,7 +12198,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id';
 -- AUTO_INCREMENT for table `index_event`
 --
 ALTER TABLE `index_event`
-MODIFY `event_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Event Id',AUTO_INCREMENT=17;
+MODIFY `event_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Event Id',AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `index_process`
 --
@@ -12052,7 +12223,7 @@ MODIFY `type_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Type ID',
 -- AUTO_INCREMENT for table `log_url_info`
 --
 ALTER TABLE `log_url_info`
-MODIFY `url_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'URL ID',AUTO_INCREMENT=48;
+MODIFY `url_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'URL ID',AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT for table `log_visitor`
 --
