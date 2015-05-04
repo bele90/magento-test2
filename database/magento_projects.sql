@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2015 at 06:41 AM
+-- Generation Time: May 04, 2015 at 09:36 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.5.19
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `adminnotification_inbox` (
   `url` varchar(255) DEFAULT NULL COMMENT 'Url',
   `is_read` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Flag if notification read',
   `is_remove` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Flag if notification might be removed'
-) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox';
+) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8 COMMENT='Adminnotification Inbox';
 
 --
 -- Dumping data for table `adminnotification_inbox`
@@ -132,6 +132,7 @@ INSERT INTO `adminnotification_inbox` VALUES(87, 1, '2015-04-23 12:43:31', 'Urge
 INSERT INTO `adminnotification_inbox` VALUES(88, 4, '2008-11-07 21:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0);
 INSERT INTO `adminnotification_inbox` VALUES(89, 4, '2008-11-07 21:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0);
 INSERT INTO `adminnotification_inbox` VALUES(90, 4, '2008-11-07 21:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0);
+INSERT INTO `adminnotification_inbox` VALUES(91, 4, '2008-11-07 21:46:42', 'Reminder: Change Magento`s default phone numbers and callouts before site launch', 'Before launching your Magento store, please remember to change Magento`s default phone numbers that appear in email templates, callouts, templates, etc.', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -161,14 +162,14 @@ CREATE TABLE IF NOT EXISTS `admin_role` (
   `role_type` varchar(1) NOT NULL DEFAULT '0' COMMENT 'Role Type',
   `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'User ID',
   `role_name` varchar(50) DEFAULT NULL COMMENT 'Role Name'
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Admin Role Table';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Admin Role Table';
 
 --
 -- Dumping data for table `admin_role`
 --
 
 INSERT INTO `admin_role` VALUES(1, 0, 1, 1, 'G', 0, 'Administrators');
-INSERT INTO `admin_role` VALUES(3, 1, 2, 0, 'U', 1, 'Viet');
+INSERT INTO `admin_role` VALUES(4, 1, 2, 0, 'U', 1, 'Viet');
 
 -- --------------------------------------------------------
 
@@ -222,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `admin_user` (
 -- Dumping data for table `admin_user`
 --
 
-INSERT INTO `admin_user` VALUES(1, 'Viet', 'Dinh', 'viet.dinh@bluecomgroup.com', 'admin', '35a31a4a37f9844490dfdcbc54b2086e:necucRGvTLFrRK1NawxWEKeLI33kJNVs', '2015-05-03 20:20:10', '2015-05-03 21:39:01', '2015-05-03 20:20:29', 1, 0, 1, 'a:1:{s:11:"configState";a:4:{s:16:"swatches_default";s:1:"1";s:13:"swatches_list";s:1:"1";s:12:"swatches_pdp";s:1:"1";s:31:"advanced_modules_disable_output";s:1:"1";}}', NULL, NULL);
+INSERT INTO `admin_user` VALUES(1, 'Viet', 'Dinh', 'viet.dinh@bluecomgroup.com', 'admin', '68d7ea3203d07db1f186188f0747c846:EerALsAI4D7jlTFtfP8CcYJH7FlTo5Xq', '2015-05-03 20:20:10', '2015-05-04 00:29:34', '2015-05-04 00:32:55', 2, 0, 1, 'a:1:{s:11:"configState";a:4:{s:16:"swatches_default";s:1:"1";s:13:"swatches_list";s:1:"1";s:12:"swatches_pdp";s:1:"1";s:31:"advanced_modules_disable_output";s:1:"1";}}', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -744,13 +745,13 @@ CREATE TABLE IF NOT EXISTS `catalogsearch_fulltext` (
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
   `data_index` longtext COMMENT 'Data index'
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Catalog search result table';
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='Catalog search result table';
 
 --
 -- Dumping data for table `catalogsearch_fulltext`
 --
 
-INSERT INTO `catalogsearch_fulltext` VALUES(4, 1, 1, 'CELL001|None|None|None|None|Iphone 6|Iphone 6S Gold|Iphone 6 Red|Iphone 6 Green|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|750|750|750|750|1');
+INSERT INTO `catalogsearch_fulltext` VALUES(10, 1, 1, 'CELL001|None|None|None|None|Iphone 6|Iphone 6S Gold|Iphone 6 Red|Iphone 6 Green|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|750|750|750|750|1');
 INSERT INTO `catalogsearch_fulltext` VALUES(5, 5, 1, 'brand-product-1|Brand Product 1|Brand Product 1|Brand Product 1|100|1');
 INSERT INTO `catalogsearch_fulltext` VALUES(6, 6, 1, 'brand-product-2|Brand Product 2|Brand Product 2|Brand Product 2|100|1');
 INSERT INTO `catalogsearch_fulltext` VALUES(7, 7, 1, 'brand-product-3|Brand Product 3|Brand Product 3|Brand Product 3|100|1');
@@ -782,7 +783,7 @@ CREATE TABLE IF NOT EXISTS `catalogsearch_query` (
 -- Dumping data for table `catalogsearch_query`
 --
 
-INSERT INTO `catalogsearch_query` VALUES(1, 'cell', 1, 15, NULL, NULL, 1, 1, 1, 1, '2015-05-03 21:40:59');
+INSERT INTO `catalogsearch_query` VALUES(1, 'cell', 1, 15, NULL, NULL, 1, 1, 1, 0, '2015-05-03 21:40:59');
 
 -- --------------------------------------------------------
 
@@ -796,12 +797,6 @@ CREATE TABLE IF NOT EXISTS `catalogsearch_result` (
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product ID',
   `relevance` decimal(20,4) NOT NULL DEFAULT '0.0000' COMMENT 'Relevance'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog search result table';
-
---
--- Dumping data for table `catalogsearch_result`
---
-
-INSERT INTO `catalogsearch_result` VALUES(1, 1, '0.0000');
 
 -- --------------------------------------------------------
 
@@ -1402,7 +1397,7 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity` (
 -- Dumping data for table `catalog_product_entity`
 --
 
-INSERT INTO `catalog_product_entity` VALUES(1, 4, 9, 'configurable', 'CELL001', 1, 1, '2015-05-03 20:29:30', '2015-05-03 20:35:29');
+INSERT INTO `catalog_product_entity` VALUES(1, 4, 9, 'configurable', 'CELL001', 1, 1, '2015-03-05 20:29:30', '2015-05-04 00:35:04');
 INSERT INTO `catalog_product_entity` VALUES(2, 4, 9, 'simple', 'CELL002', 0, 0, '2015-03-05 20:30:49', '2015-05-03 20:36:21');
 INSERT INTO `catalog_product_entity` VALUES(3, 4, 9, 'simple', 'CELL003', 0, 0, '2015-05-03 20:32:10', '2015-05-03 20:32:10');
 INSERT INTO `catalog_product_entity` VALUES(4, 4, 9, 'simple', 'CELL004', 0, 0, '2015-05-03 20:33:41', '2015-05-03 20:33:41');
@@ -1426,7 +1421,7 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity_datetime` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
   `value` datetime DEFAULT NULL COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Datetime Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Datetime Attribute Backend Table';
 
 --
 -- Dumping data for table `catalog_product_entity_datetime`
@@ -1471,7 +1466,7 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity_decimal` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
   `value` decimal(12,4) DEFAULT NULL COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Decimal Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Decimal Attribute Backend Table';
 
 --
 -- Dumping data for table `catalog_product_entity_decimal`
@@ -1608,16 +1603,16 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity_media_gallery` (
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
   `value` varchar(255) DEFAULT NULL COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Media Gallery Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Media Gallery Attribute Backend Table';
 
 --
 -- Dumping data for table `catalog_product_entity_media_gallery`
 --
 
-INSERT INTO `catalog_product_entity_media_gallery` VALUES(1, 88, 1, '/6/-/6-utl-blk-1.jpg');
 INSERT INTO `catalog_product_entity_media_gallery` VALUES(2, 88, 2, '/2/0/20130913iphone5c_yellow.jpg');
 INSERT INTO `catalog_product_entity_media_gallery` VALUES(3, 88, 3, '/i/p/iphone6_case_leather_red_large.jpg');
 INSERT INTO `catalog_product_entity_media_gallery` VALUES(4, 88, 4, '/a/p/aps-ip4s-ck-13a.jpg');
+INSERT INTO `catalog_product_entity_media_gallery` VALUES(5, 88, 1, '/6/-/6-utl-blk-1.jpg');
 
 -- --------------------------------------------------------
 
@@ -1638,10 +1633,10 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity_media_gallery_value` (
 -- Dumping data for table `catalog_product_entity_media_gallery_value`
 --
 
-INSERT INTO `catalog_product_entity_media_gallery_value` VALUES(1, 0, NULL, 1, 0);
 INSERT INTO `catalog_product_entity_media_gallery_value` VALUES(2, 0, NULL, 1, 0);
 INSERT INTO `catalog_product_entity_media_gallery_value` VALUES(3, 0, NULL, 1, 0);
 INSERT INTO `catalog_product_entity_media_gallery_value` VALUES(4, 0, NULL, 1, 0);
+INSERT INTO `catalog_product_entity_media_gallery_value` VALUES(5, 0, NULL, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -1657,7 +1652,7 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity_text` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
   `value` text COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Text Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Text Attribute Backend Table';
 
 --
 -- Dumping data for table `catalog_product_entity_text`
@@ -1731,7 +1726,7 @@ CREATE TABLE IF NOT EXISTS `catalog_product_entity_varchar` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
   `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity ID',
   `value` varchar(255) DEFAULT NULL COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=162 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Varchar Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=172 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Varchar Attribute Backend Table';
 
 --
 -- Dumping data for table `catalog_product_entity_varchar`
@@ -1848,6 +1843,7 @@ INSERT INTO `catalog_product_entity_varchar` VALUES(157, 4, 97, 1, 9, 'brand-pro
 INSERT INTO `catalog_product_entity_varchar` VALUES(159, 4, 97, 0, 9, 'brand-product-5');
 INSERT INTO `catalog_product_entity_varchar` VALUES(160, 4, 98, 1, 9, 'brand-product-5.html');
 INSERT INTO `catalog_product_entity_varchar` VALUES(161, 4, 98, 0, 9, 'brand-product-5.html');
+INSERT INTO `catalog_product_entity_varchar` VALUES(162, 4, 133, 0, 1, '1');
 
 -- --------------------------------------------------------
 
@@ -1938,6 +1934,12 @@ CREATE TABLE IF NOT EXISTS `catalog_product_index_eav_tmp` (
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID',
   `value` int(10) unsigned NOT NULL COMMENT 'Value'
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8 COMMENT='Catalog Product EAV Indexer Temp Table';
+
+--
+-- Dumping data for table `catalog_product_index_eav_tmp`
+--
+
+INSERT INTO `catalog_product_index_eav_tmp` VALUES(1, 121, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -2404,10 +2406,10 @@ CREATE TABLE IF NOT EXISTS `catalog_product_index_price_tmp` (
 -- Dumping data for table `catalog_product_index_price_tmp`
 --
 
-INSERT INTO `catalog_product_index_price_tmp` VALUES(9, 0, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
-INSERT INTO `catalog_product_index_price_tmp` VALUES(9, 1, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
-INSERT INTO `catalog_product_index_price_tmp` VALUES(9, 2, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
-INSERT INTO `catalog_product_index_price_tmp` VALUES(9, 3, 1, NULL, '100.0000', '100.0000', '100.0000', '100.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price_tmp` VALUES(1, 0, 1, 0, '750.0000', '750.0000', '780.0000', '850.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price_tmp` VALUES(1, 1, 1, 0, '750.0000', '750.0000', '780.0000', '850.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price_tmp` VALUES(1, 2, 1, 0, '750.0000', '750.0000', '780.0000', '850.0000', NULL, NULL);
+INSERT INTO `catalog_product_index_price_tmp` VALUES(1, 3, 1, 0, '750.0000', '750.0000', '780.0000', '850.0000', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2440,7 +2442,7 @@ CREATE TABLE IF NOT EXISTS `catalog_product_index_website` (
 -- Dumping data for table `catalog_product_index_website`
 --
 
-INSERT INTO `catalog_product_index_website` VALUES(1, '2015-05-03', 1);
+INSERT INTO `catalog_product_index_website` VALUES(1, '2015-05-04', 1);
 
 -- --------------------------------------------------------
 
@@ -2934,14 +2936,14 @@ CREATE TABLE IF NOT EXISTS `core_cache_option` (
 -- Dumping data for table `core_cache_option`
 --
 
-INSERT INTO `core_cache_option` VALUES('block_html', 0);
-INSERT INTO `core_cache_option` VALUES('collections', 0);
-INSERT INTO `core_cache_option` VALUES('config', 0);
-INSERT INTO `core_cache_option` VALUES('config_api', 0);
-INSERT INTO `core_cache_option` VALUES('config_api2', 0);
-INSERT INTO `core_cache_option` VALUES('eav', 0);
-INSERT INTO `core_cache_option` VALUES('layout', 0);
-INSERT INTO `core_cache_option` VALUES('translate', 0);
+INSERT INTO `core_cache_option` VALUES('block_html', 1);
+INSERT INTO `core_cache_option` VALUES('collections', 1);
+INSERT INTO `core_cache_option` VALUES('config', 1);
+INSERT INTO `core_cache_option` VALUES('config_api', 1);
+INSERT INTO `core_cache_option` VALUES('config_api2', 1);
+INSERT INTO `core_cache_option` VALUES('eav', 1);
+INSERT INTO `core_cache_option` VALUES('layout', 1);
+INSERT INTO `core_cache_option` VALUES('translate', 1);
 
 -- --------------------------------------------------------
 
@@ -3137,7 +3139,7 @@ CREATE TABLE IF NOT EXISTS `core_flag` (
 -- Dumping data for table `core_flag`
 --
 
-INSERT INTO `core_flag` VALUES(1, 'admin_notification_survey', 0, 'a:1:{s:13:"survey_viewed";b:1;}', '2015-05-03 21:39:02');
+INSERT INTO `core_flag` VALUES(1, 'admin_notification_survey', 0, 'a:1:{s:13:"survey_viewed";b:1;}', '2015-05-04 00:29:34');
 
 -- --------------------------------------------------------
 
@@ -5698,13 +5700,13 @@ CREATE TABLE IF NOT EXISTS `eav_attribute_label` (
   `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
   `value` varchar(255) DEFAULT NULL COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Label';
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Label';
 
 --
 -- Dumping data for table `eav_attribute_label`
 --
 
-INSERT INTO `eav_attribute_label` VALUES(6, 132, 1, 'Color');
+INSERT INTO `eav_attribute_label` VALUES(7, 132, 1, 'Color');
 
 -- --------------------------------------------------------
 
@@ -5742,7 +5744,7 @@ CREATE TABLE IF NOT EXISTS `eav_attribute_option_value` (
   `option_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Option Id',
   `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
   `value` varchar(255) DEFAULT NULL COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Option Value';
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COMMENT='Eav Attribute Option Value';
 
 --
 -- Dumping data for table `eav_attribute_option_value`
@@ -5750,14 +5752,14 @@ CREATE TABLE IF NOT EXISTS `eav_attribute_option_value` (
 
 INSERT INTO `eav_attribute_option_value` VALUES(1, 1, 0, 'Male');
 INSERT INTO `eav_attribute_option_value` VALUES(2, 2, 0, 'Female');
-INSERT INTO `eav_attribute_option_value` VALUES(19, 5, 0, 'Blue');
-INSERT INTO `eav_attribute_option_value` VALUES(20, 5, 1, 'Blue');
-INSERT INTO `eav_attribute_option_value` VALUES(21, 6, 0, 'Gold');
-INSERT INTO `eav_attribute_option_value` VALUES(22, 6, 1, 'Gold');
-INSERT INTO `eav_attribute_option_value` VALUES(23, 4, 0, 'Green');
-INSERT INTO `eav_attribute_option_value` VALUES(24, 4, 1, 'Green');
-INSERT INTO `eav_attribute_option_value` VALUES(25, 3, 0, 'Red');
-INSERT INTO `eav_attribute_option_value` VALUES(26, 3, 1, 'Red');
+INSERT INTO `eav_attribute_option_value` VALUES(27, 5, 0, 'Blue');
+INSERT INTO `eav_attribute_option_value` VALUES(28, 5, 1, 'Blue');
+INSERT INTO `eav_attribute_option_value` VALUES(29, 6, 0, 'Gold');
+INSERT INTO `eav_attribute_option_value` VALUES(30, 6, 1, 'Gold');
+INSERT INTO `eav_attribute_option_value` VALUES(31, 4, 0, 'Green');
+INSERT INTO `eav_attribute_option_value` VALUES(32, 4, 1, 'Green');
+INSERT INTO `eav_attribute_option_value` VALUES(33, 3, 0, 'Red');
+INSERT INTO `eav_attribute_option_value` VALUES(34, 3, 1, 'Red');
 
 -- --------------------------------------------------------
 
@@ -6420,15 +6422,15 @@ CREATE TABLE IF NOT EXISTS `index_process` (
 -- Dumping data for table `index_process`
 --
 
-INSERT INTO `index_process` VALUES(1, 'catalog_product_attribute', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
-INSERT INTO `index_process` VALUES(2, 'catalog_product_price', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
-INSERT INTO `index_process` VALUES(3, 'catalog_url', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
+INSERT INTO `index_process` VALUES(1, 'catalog_product_attribute', 'require_reindex', '2015-05-04 00:35:05', '2015-05-04 00:35:06', 'real_time');
+INSERT INTO `index_process` VALUES(2, 'catalog_product_price', 'require_reindex', '2015-05-04 00:35:06', '2015-05-04 00:35:06', 'real_time');
+INSERT INTO `index_process` VALUES(3, 'catalog_url', 'require_reindex', '2015-05-04 00:35:06', '2015-05-04 00:35:06', 'real_time');
 INSERT INTO `index_process` VALUES(4, 'catalog_product_flat', 'require_reindex', NULL, NULL, 'real_time');
 INSERT INTO `index_process` VALUES(5, 'catalog_category_flat', 'require_reindex', NULL, NULL, 'real_time');
-INSERT INTO `index_process` VALUES(6, 'catalog_category_product', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
-INSERT INTO `index_process` VALUES(7, 'catalogsearch_fulltext', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
-INSERT INTO `index_process` VALUES(8, 'cataloginventory_stock', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
-INSERT INTO `index_process` VALUES(9, 'tag_summary', 'require_reindex', '2015-05-03 21:38:26', '2015-05-03 21:38:26', 'real_time');
+INSERT INTO `index_process` VALUES(6, 'catalog_category_product', 'require_reindex', '2015-05-04 00:35:06', '2015-05-04 00:35:06', 'real_time');
+INSERT INTO `index_process` VALUES(7, 'catalogsearch_fulltext', 'require_reindex', '2015-05-04 00:35:06', '2015-05-04 00:35:07', 'real_time');
+INSERT INTO `index_process` VALUES(8, 'cataloginventory_stock', 'require_reindex', '2015-05-04 00:35:05', '2015-05-04 00:35:05', 'real_time');
+INSERT INTO `index_process` VALUES(9, 'tag_summary', 'require_reindex', '2015-05-04 00:35:07', '2015-05-04 00:35:07', 'real_time');
 
 -- --------------------------------------------------------
 
@@ -6478,6 +6480,7 @@ CREATE TABLE IF NOT EXISTS `log_quote` (
 --
 
 INSERT INTO `log_quote` VALUES(1, 1, '2015-05-03 20:34:10', NULL);
+INSERT INTO `log_quote` VALUES(2, 3, '2015-05-04 00:35:15', NULL);
 
 -- --------------------------------------------------------
 
@@ -6584,6 +6587,16 @@ INSERT INTO `log_url` VALUES(48, 1, '2015-05-03 21:40:51');
 INSERT INTO `log_url` VALUES(49, 1, '2015-05-03 21:40:54');
 INSERT INTO `log_url` VALUES(50, 1, '2015-05-03 21:40:59');
 INSERT INTO `log_url` VALUES(51, 1, '2015-05-03 21:41:00');
+INSERT INTO `log_url` VALUES(52, 3, '2015-05-04 00:29:42');
+INSERT INTO `log_url` VALUES(53, 3, '2015-05-04 00:29:48');
+INSERT INTO `log_url` VALUES(54, 3, '2015-05-04 00:30:26');
+INSERT INTO `log_url` VALUES(55, 3, '2015-05-04 00:30:35');
+INSERT INTO `log_url` VALUES(56, 3, '2015-05-04 00:33:52');
+INSERT INTO `log_url` VALUES(57, 3, '2015-05-04 00:33:56');
+INSERT INTO `log_url` VALUES(58, 3, '2015-05-04 00:33:58');
+INSERT INTO `log_url` VALUES(59, 3, '2015-05-04 00:35:09');
+INSERT INTO `log_url` VALUES(60, 3, '2015-05-04 00:35:15');
+INSERT INTO `log_url` VALUES(61, 3, '2015-05-04 00:35:16');
 
 -- --------------------------------------------------------
 
@@ -6596,7 +6609,7 @@ CREATE TABLE IF NOT EXISTS `log_url_info` (
 `url_id` bigint(20) unsigned NOT NULL COMMENT 'URL ID',
   `url` varchar(255) DEFAULT NULL COMMENT 'URL',
   `referer` varchar(255) DEFAULT NULL COMMENT 'Referrer'
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COMMENT='Log URL Info Table';
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8 COMMENT='Log URL Info Table';
 
 --
 -- Dumping data for table `log_url_info`
@@ -6653,6 +6666,16 @@ INSERT INTO `log_url_info` VALUES(48, 'http://magentoprojects.com/index.php/', N
 INSERT INTO `log_url_info` VALUES(49, 'http://magentoprojects.com/index.php/catalog/category/view/id/3', 'http://magentoprojects.com/index.php/');
 INSERT INTO `log_url_info` VALUES(50, 'http://magentoprojects.com/index.php/catalogsearch/result/?q=cell', 'http://magentoprojects.com/index.php/cell-phone.html');
 INSERT INTO `log_url_info` VALUES(51, 'http://magentoprojects.com/index.php/catalogsearch/ajax/suggest/?q=cell', 'http://magentoprojects.com/index.php/cell-phone.html');
+INSERT INTO `log_url_info` VALUES(52, 'http://magentoprojects.com/index.php/', 'http://magentoprojects.com/index.php/install/wizard/end/');
+INSERT INTO `log_url_info` VALUES(53, 'http://magentoprojects.com/index.php/catalog/category/view/id/3', 'http://magentoprojects.com/index.php/');
+INSERT INTO `log_url_info` VALUES(54, 'http://magentoprojects.com/index.php/catalog/category/view/id/3', 'http://magentoprojects.com/index.php/');
+INSERT INTO `log_url_info` VALUES(55, 'http://magentoprojects.com/index.php/catalog/product/view/id/1/category/3', 'http://magentoprojects.com/index.php/cell-phone.html');
+INSERT INTO `log_url_info` VALUES(56, 'http://magentoprojects.com/index.php/catalog/product/view/id/1/category/3', 'http://magentoprojects.com/index.php/cell-phone.html');
+INSERT INTO `log_url_info` VALUES(57, 'http://magentoprojects.com/index.php/', 'http://magentoprojects.com/index.php/cell-phone/iphone-6.html');
+INSERT INTO `log_url_info` VALUES(58, 'http://magentoprojects.com/index.php/catalog/category/view/id/3', 'http://magentoprojects.com/index.php/');
+INSERT INTO `log_url_info` VALUES(59, 'http://magentoprojects.com/index.php/catalog/category/view/id/3', 'http://magentoprojects.com/index.php/');
+INSERT INTO `log_url_info` VALUES(60, 'http://magentoprojects.com/index.php/checkout/cart/add/uenc/aHR0cDovL21hZ2VudG9wcm9qZWN0cy5jb20vaW5kZXgucGhwL2NlbGwtcGhvbmUuaHRtbA,,/product/1/form_key/7Jb45ps0ek6C0eFQ/?super_attribute%5B132%5D=4', 'http://magentoprojects.com/index.php/cell-phone.html');
+INSERT INTO `log_url_info` VALUES(61, 'http://magentoprojects.com/index.php/checkout/cart/', 'http://magentoprojects.com/index.php/cell-phone.html');
 
 -- --------------------------------------------------------
 
@@ -6668,7 +6691,7 @@ CREATE TABLE IF NOT EXISTS `log_visitor` (
   `last_visit_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'Last Visit Time',
   `last_url_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT 'Last URL ID',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store ID'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Log Visitors Table';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Log Visitors Table';
 
 --
 -- Dumping data for table `log_visitor`
@@ -6676,6 +6699,7 @@ CREATE TABLE IF NOT EXISTS `log_visitor` (
 
 INSERT INTO `log_visitor` VALUES(1, 'ibkn5hn89btc31ntnkdaacrq07', '2015-05-03 20:21:16', '2015-05-03 21:41:00', 51, 1);
 INSERT INTO `log_visitor` VALUES(2, 'q3c03lgg6ubo4gde69pb5magk5', '2015-05-03 21:14:25', '2015-05-03 21:14:25', 46, 1);
+INSERT INTO `log_visitor` VALUES(3, '100ciptiu84tkfcfk8ee5i34i0', '2015-05-04 00:29:41', '2015-05-04 00:35:16', 61, 1);
 
 -- --------------------------------------------------------
 
@@ -6700,6 +6724,7 @@ CREATE TABLE IF NOT EXISTS `log_visitor_info` (
 
 INSERT INTO `log_visitor_info` VALUES(1, NULL, 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0', NULL, 'en-US,en;q=0.5', 2130706433, 2130706433);
 INSERT INTO `log_visitor_info` VALUES(2, NULL, 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0', NULL, 'en-US,en;q=0.5', 2130706433, 2130706433);
+INSERT INTO `log_visitor_info` VALUES(3, 'http://magentoprojects.com/index.php/install/wizard/end/', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0', NULL, 'en-US,en;q=0.5', 2130706433, 2130706433);
 
 -- --------------------------------------------------------
 
@@ -7256,7 +7281,7 @@ CREATE TABLE IF NOT EXISTS `report_event` (
   `subject_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Subject Id',
   `subtype` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Subtype',
   `store_id` smallint(5) unsigned NOT NULL COMMENT 'Store Id'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Reports Event Table';
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Reports Event Table';
 
 --
 -- Dumping data for table `report_event`
@@ -7266,6 +7291,9 @@ INSERT INTO `report_event` VALUES(1, '2015-05-03 20:34:10', 4, 1, 1, 1, 1);
 INSERT INTO `report_event` VALUES(2, '2015-05-03 20:36:31', 1, 1, 1, 1, 1);
 INSERT INTO `report_event` VALUES(3, '2015-05-03 20:36:44', 1, 1, 1, 1, 1);
 INSERT INTO `report_event` VALUES(4, '2015-05-03 20:50:54', 1, 1, 1, 1, 1);
+INSERT INTO `report_event` VALUES(5, '2015-05-04 00:30:34', 1, 1, 3, 1, 1);
+INSERT INTO `report_event` VALUES(6, '2015-05-04 00:33:52', 1, 1, 3, 1, 1);
+INSERT INTO `report_event` VALUES(7, '2015-05-04 00:35:15', 4, 1, 3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -7366,6 +7394,7 @@ CREATE TABLE IF NOT EXISTS `report_viewed_product_index` (
 --
 
 INSERT INTO `report_viewed_product_index` VALUES(1, 1, NULL, 1, 1, '2015-05-03 20:50:54');
+INSERT INTO `report_viewed_product_index` VALUES(2, 3, NULL, 1, 1, '2015-05-04 00:33:52');
 
 -- --------------------------------------------------------
 
@@ -8413,13 +8442,14 @@ CREATE TABLE IF NOT EXISTS `sales_flat_quote` (
   `ext_shipping_info` text COMMENT 'Ext Shipping Info',
   `gift_message_id` int(11) DEFAULT NULL COMMENT 'Gift Message Id',
   `is_persistent` smallint(5) unsigned DEFAULT '0' COMMENT 'Is Quote Persistent'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote';
 
 --
 -- Dumping data for table `sales_flat_quote`
 --
 
 INSERT INTO `sales_flat_quote` VALUES(1, 1, '2015-05-03 20:34:10', '2015-05-03 20:53:09', NULL, 1, 0, 0, 1, '2.0000', 0, '1.0000', '1.0000', 'USD', 'USD', 'USD', '1590.0000', '1590.0000', NULL, NULL, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '127.0.0.1', NULL, NULL, NULL, NULL, 'USD', '1.0000', '1.0000', NULL, NULL, '1590.0000', '1590.0000', '1590.0000', '1590.0000', 1, 0, NULL, NULL, 0);
+INSERT INTO `sales_flat_quote` VALUES(2, 1, '2015-05-04 00:35:14', '2015-05-04 00:35:16', NULL, 1, 0, 0, 1, '1.0000', 0, '1.0000', '1.0000', 'USD', 'USD', 'USD', '795.0000', '795.0000', NULL, NULL, 3, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '127.0.0.1', NULL, NULL, NULL, NULL, 'USD', '1.0000', '1.0000', NULL, NULL, '795.0000', '795.0000', '795.0000', '795.0000', 1, 0, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -8491,7 +8521,7 @@ CREATE TABLE IF NOT EXISTS `sales_flat_quote_address` (
   `vat_request_date` text COMMENT 'Vat Request Date',
   `vat_request_success` smallint(6) DEFAULT NULL COMMENT 'Vat Request Success',
   `gift_message_id` int(11) DEFAULT NULL COMMENT 'Gift Message Id'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Address';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Address';
 
 --
 -- Dumping data for table `sales_flat_quote_address`
@@ -8499,6 +8529,8 @@ CREATE TABLE IF NOT EXISTS `sales_flat_quote_address` (
 
 INSERT INTO `sales_flat_quote_address` VALUES(1, 1, '2015-05-03 20:34:10', '2015-05-03 20:53:10', NULL, 0, NULL, 'billing', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL, NULL, '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', NULL, 'a:0:{}', NULL, NULL, NULL, '0.0000', NULL, NULL, NULL, NULL, NULL, '0.0000', '0.0000', NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `sales_flat_quote_address` VALUES(2, 1, '2015-05-03 20:34:10', '2015-05-03 20:53:10', NULL, 0, NULL, 'shipping', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, 0, NULL, NULL, '1.0000', '1590.0000', '1590.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '1590.0000', '1590.0000', NULL, 'a:0:{}', NULL, '0.0000', '0.0000', '1590.0000', NULL, '0.0000', '0.0000', '0.0000', NULL, '0.0000', '0.0000', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `sales_flat_quote_address` VALUES(3, 2, '2015-05-04 00:35:15', '2015-05-04 00:35:16', NULL, 0, NULL, 'billing', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, NULL, NULL, '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', NULL, 'a:0:{}', NULL, NULL, NULL, '0.0000', NULL, NULL, NULL, NULL, NULL, '0.0000', '0.0000', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `sales_flat_quote_address` VALUES(4, 2, '2015-05-04 00:35:15', '2015-05-04 00:35:16', NULL, 0, NULL, 'shipping', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, 0, NULL, NULL, '0.5000', '795.0000', '795.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '795.0000', '795.0000', NULL, 'a:0:{}', NULL, '0.0000', '0.0000', '795.0000', NULL, '0.0000', '0.0000', '0.0000', NULL, '0.0000', '0.0000', NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -8611,7 +8643,7 @@ CREATE TABLE IF NOT EXISTS `sales_flat_quote_item` (
   `weee_tax_applied_row_amount` decimal(12,4) DEFAULT NULL COMMENT 'Weee Tax Applied Row Amount',
   `base_weee_tax_applied_amount` decimal(12,4) DEFAULT NULL COMMENT 'Base Weee Tax Applied Amount',
   `base_weee_tax_applied_row_amnt` decimal(12,4) DEFAULT NULL COMMENT 'Base Weee Tax Applied Row Amnt'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Item';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Item';
 
 --
 -- Dumping data for table `sales_flat_quote_item`
@@ -8619,6 +8651,8 @@ CREATE TABLE IF NOT EXISTS `sales_flat_quote_item` (
 
 INSERT INTO `sales_flat_quote_item` VALUES(1, 1, '2015-05-03 20:34:10', '2015-05-03 20:53:09', 1, 1, NULL, 0, 'CELL004', 'Iphone 6', NULL, NULL, NULL, 0, 0, 0, '0.5000', '2.0000', '795.0000', '795.0000', NULL, '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '1590.0000', '1590.0000', '0.0000', '1.0000', 'configurable', NULL, NULL, NULL, NULL, NULL, '795.0000', '795.0000', '1590.0000', '1590.0000', '0.0000', '0.0000', NULL, '0.0000', '0.0000', '0.0000', '0.0000', 'a:0:{}', '0.0000', '0.0000', '0.0000', NULL);
 INSERT INTO `sales_flat_quote_item` VALUES(2, 1, '2015-05-03 20:34:10', '2015-05-03 20:34:11', 4, 1, 1, 0, 'CELL004', 'Iphone 6 Green', NULL, NULL, NULL, 0, 0, 0, '0.5000', '1.0000', '0.0000', '0.0000', NULL, '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', 'simple', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0.0000', '0.0000', '0.0000', '0.0000', 'a:0:{}', '0.0000', '0.0000', '0.0000', NULL);
+INSERT INTO `sales_flat_quote_item` VALUES(3, 2, '2015-05-04 00:35:15', '2015-05-04 00:35:16', 1, 1, NULL, 0, 'CELL004', 'Iphone 6', NULL, NULL, NULL, 0, 0, 0, '0.5000', '1.0000', '795.0000', '795.0000', NULL, '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '795.0000', '795.0000', '0.0000', '0.5000', 'configurable', NULL, NULL, NULL, NULL, NULL, '795.0000', '795.0000', '795.0000', '795.0000', '0.0000', '0.0000', NULL, '0.0000', '0.0000', '0.0000', '0.0000', 'a:0:{}', '0.0000', '0.0000', '0.0000', NULL);
+INSERT INTO `sales_flat_quote_item` VALUES(4, 2, '2015-05-04 00:35:15', '2015-05-04 00:35:16', 4, 1, 3, 0, 'CELL004', 'Iphone 6 Green', NULL, NULL, NULL, 0, 0, 0, '0.5000', '1.0000', '0.0000', '0.0000', NULL, '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', 'simple', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '0.0000', '0.0000', '0.0000', '0.0000', 'a:0:{}', '0.0000', '0.0000', '0.0000', NULL);
 
 -- --------------------------------------------------------
 
@@ -8633,7 +8667,7 @@ CREATE TABLE IF NOT EXISTS `sales_flat_quote_item_option` (
   `product_id` int(10) unsigned NOT NULL COMMENT 'Product Id',
   `code` varchar(255) NOT NULL COMMENT 'Code',
   `value` text COMMENT 'Value'
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Item Option';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='Sales Flat Quote Item Option';
 
 --
 -- Dumping data for table `sales_flat_quote_item_option`
@@ -8645,6 +8679,12 @@ INSERT INTO `sales_flat_quote_item_option` VALUES(3, 1, 4, 'product_qty_4', '1')
 INSERT INTO `sales_flat_quote_item_option` VALUES(4, 1, 4, 'simple_product', '4');
 INSERT INTO `sales_flat_quote_item_option` VALUES(5, 2, 4, 'info_buyRequest', 'a:5:{s:4:"uenc";s:72:"aHR0cDovL21hZ2VudG9wcm9qZWN0cy5jb20vaW5kZXgucGhwL2NlbGwtcGhvbmUuaHRtbA,,";s:7:"product";s:1:"1";s:8:"form_key";s:16:"97rTvEnTNEOL2TQX";s:15:"super_attribute";a:1:{i:132;s:1:"4";}s:3:"qty";i:1;}');
 INSERT INTO `sales_flat_quote_item_option` VALUES(6, 2, 4, 'parent_product_id', '1');
+INSERT INTO `sales_flat_quote_item_option` VALUES(7, 3, 1, 'info_buyRequest', 'a:5:{s:4:"uenc";s:72:"aHR0cDovL21hZ2VudG9wcm9qZWN0cy5jb20vaW5kZXgucGhwL2NlbGwtcGhvbmUuaHRtbA,,";s:7:"product";s:1:"1";s:8:"form_key";s:16:"7Jb45ps0ek6C0eFQ";s:15:"super_attribute";a:1:{i:132;s:1:"4";}s:3:"qty";i:1;}');
+INSERT INTO `sales_flat_quote_item_option` VALUES(8, 3, 1, 'attributes', 'a:1:{i:132;s:1:"4";}');
+INSERT INTO `sales_flat_quote_item_option` VALUES(9, 3, 4, 'product_qty_4', '1');
+INSERT INTO `sales_flat_quote_item_option` VALUES(10, 3, 4, 'simple_product', '4');
+INSERT INTO `sales_flat_quote_item_option` VALUES(11, 4, 4, 'info_buyRequest', 'a:5:{s:4:"uenc";s:72:"aHR0cDovL21hZ2VudG9wcm9qZWN0cy5jb20vaW5kZXgucGhwL2NlbGwtcGhvbmUuaHRtbA,,";s:7:"product";s:1:"1";s:8:"form_key";s:16:"7Jb45ps0ek6C0eFQ";s:15:"super_attribute";a:1:{i:132;s:1:"4";}s:3:"qty";i:1;}');
+INSERT INTO `sales_flat_quote_item_option` VALUES(12, 4, 4, 'parent_product_id', '1');
 
 -- --------------------------------------------------------
 
@@ -9207,6 +9247,39 @@ CREATE TABLE IF NOT EXISTS `sitemap` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `smashingmagazine_branddirectory_brand`
+--
+
+DROP TABLE IF EXISTS `smashingmagazine_branddirectory_brand`;
+CREATE TABLE IF NOT EXISTS `smashingmagazine_branddirectory_brand` (
+`entity_id` int(10) unsigned NOT NULL COMMENT 'Entity_id',
+  `create_at` datetime NOT NULL COMMENT 'Create_at',
+  `update_at` datetime NOT NULL COMMENT 'Update_at',
+  `name` varchar(255) NOT NULL COMMENT 'Name',
+  `url_key` varchar(255) NOT NULL COMMENT 'Url_key',
+  `description` text NOT NULL COMMENT 'Description',
+  `visibility` tinyint(1) NOT NULL COMMENT 'Visibility',
+  `image` text COMMENT 'Image'
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='smashingmagazine_branddirectory_brand';
+
+--
+-- Dumping data for table `smashingmagazine_branddirectory_brand`
+--
+
+INSERT INTO `smashingmagazine_branddirectory_brand` VALUES(1, '2015-05-04 04:38:19', '2015-05-04 04:38:19', 'Brand Name 1', 'brand-url-1', '<p>Brand Description 1</p>', 1, NULL);
+INSERT INTO `smashingmagazine_branddirectory_brand` VALUES(2, '2015-05-04 04:38:19', '2015-05-04 04:38:19', 'Brand Name 2', 'brand-url-2', '<p>Brand Description 2</p>', 1, NULL);
+INSERT INTO `smashingmagazine_branddirectory_brand` VALUES(3, '2015-05-04 04:38:19', '2015-05-04 04:38:19', 'Brand Name 3', 'brand-url-3', '<p>Brand Description 3</p>', 1, NULL);
+INSERT INTO `smashingmagazine_branddirectory_brand` VALUES(4, '2015-05-04 04:38:19', '2015-05-04 04:38:19', 'Brand Name 4', 'brand-url-4', '<p>Brand Description 4</p>', 1, NULL);
+INSERT INTO `smashingmagazine_branddirectory_brand` VALUES(5, '2015-05-04 04:38:19', '2015-05-04 04:38:19', 'Brand Name 5', 'brand-url-5', '<p>Brand Description 5</p>', 1, NULL);
+INSERT INTO `smashingmagazine_branddirectory_brand` VALUES(6, '2015-05-04 04:38:19', '2015-05-04 04:38:19', 'Brand Name 6', 'brand-url-6', '<p>Brand Description 6</p>', 0, NULL);
+INSERT INTO `smashingmagazine_branddirectory_brand` VALUES(7, '2015-05-04 04:38:19', '2015-05-04 04:38:19', 'Brand Name 7', 'brand-url-7', '<p>Brand Description 7</p>', 0, NULL);
+INSERT INTO `smashingmagazine_branddirectory_brand` VALUES(8, '2015-05-04 04:38:19', '2015-05-04 04:38:19', 'Brand Name 8', 'brand-url-8', '<p>Brand Description 8</p>', 0, NULL);
+INSERT INTO `smashingmagazine_branddirectory_brand` VALUES(9, '2015-05-04 04:38:19', '2015-05-04 04:38:19', 'Brand Name 9', 'brand-url-9', '<p>Brand Description 9</p>', 0, NULL);
+INSERT INTO `smashingmagazine_branddirectory_brand` VALUES(10, '2015-05-04 04:38:19', '2015-05-04 04:38:19', 'Brand Name 10', 'brand-url-10', '<p>Brand Description 10</p>', 0, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tag`
 --
 
@@ -9406,6 +9479,68 @@ CREATE TABLE IF NOT EXISTS `tax_order_aggregated_updated` (
   `orders_count` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Orders Count',
   `tax_base_amount_sum` float DEFAULT NULL COMMENT 'Tax Base Amount Sum'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tax Order Aggregated Updated';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `websgle_blog_post_entity`
+--
+
+DROP TABLE IF EXISTS `websgle_blog_post_entity`;
+CREATE TABLE IF NOT EXISTS `websgle_blog_post_entity` (
+`entity_id` int(10) unsigned NOT NULL COMMENT 'Entity ID',
+  `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
+  `created_at` timestamp NULL DEFAULT NULL COMMENT 'Create Time',
+  `updated_at` timestamp NULL DEFAULT NULL COMMENT 'Update Time'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Websgle Blog Post Table';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `websgle_blog_post_entity_int`
+--
+
+DROP TABLE IF EXISTS `websgle_blog_post_entity_int`;
+CREATE TABLE IF NOT EXISTS `websgle_blog_post_entity_int` (
+`value_id` int(11) NOT NULL COMMENT 'Value Id',
+  `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
+  `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
+  `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store ID',
+  `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Id',
+  `value` varchar(255) DEFAULT NULL COMMENT 'Value'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Websgle Blog Post Entity Int';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `websgle_blog_post_entity_text`
+--
+
+DROP TABLE IF EXISTS `websgle_blog_post_entity_text`;
+CREATE TABLE IF NOT EXISTS `websgle_blog_post_entity_text` (
+`value_id` int(11) NOT NULL COMMENT 'Value Id',
+  `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
+  `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
+  `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Store Id',
+  `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Id',
+  `value` varchar(255) DEFAULT NULL COMMENT 'Value'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Websgle Blog Post Entity Text';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `websgle_blog_post_entity_varchar`
+--
+
+DROP TABLE IF EXISTS `websgle_blog_post_entity_varchar`;
+CREATE TABLE IF NOT EXISTS `websgle_blog_post_entity_varchar` (
+`value_id` int(11) NOT NULL COMMENT 'Value Id',
+  `entity_type_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Type Id',
+  `attribute_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Attribute Id',
+  `store_id` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Id',
+  `entity_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Entity Id',
+  `value` varchar(255) DEFAULT NULL COMMENT 'Value'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Websgle Blog Post Entity Varchar';
 
 -- --------------------------------------------------------
 
@@ -11436,6 +11571,12 @@ ALTER TABLE `sitemap`
  ADD PRIMARY KEY (`sitemap_id`), ADD KEY `IDX_SITEMAP_STORE_ID` (`store_id`);
 
 --
+-- Indexes for table `smashingmagazine_branddirectory_brand`
+--
+ALTER TABLE `smashingmagazine_branddirectory_brand`
+ ADD PRIMARY KEY (`entity_id`);
+
+--
 -- Indexes for table `tag`
 --
 ALTER TABLE `tag`
@@ -11502,6 +11643,30 @@ ALTER TABLE `tax_order_aggregated_updated`
  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `DB0AF14011199AA6CD31D5078B90AA8D` (`period`,`store_id`,`code`,`percent`,`order_status`), ADD KEY `IDX_TAX_ORDER_AGGREGATED_UPDATED_STORE_ID` (`store_id`);
 
 --
+-- Indexes for table `websgle_blog_post_entity`
+--
+ALTER TABLE `websgle_blog_post_entity`
+ ADD PRIMARY KEY (`entity_id`);
+
+--
+-- Indexes for table `websgle_blog_post_entity_int`
+--
+ALTER TABLE `websgle_blog_post_entity_int`
+ ADD PRIMARY KEY (`value_id`), ADD UNIQUE KEY `UNQ_WEBSGLE_BLOG_POST_ENTITY_INT_ENTITY_ID_ATTRIBUTE_ID_STORE_ID` (`entity_id`,`attribute_id`,`store_id`), ADD KEY `IDX_WEBSGLE_BLOG_POST_ENTITY_INT_ATTRIBUTE_ID` (`attribute_id`), ADD KEY `IDX_WEBSGLE_BLOG_POST_ENTITY_INT_STORE_ID` (`store_id`), ADD KEY `IDX_WEBSGLE_BLOG_POST_ENTITY_INT_ENTITY_ID` (`entity_id`);
+
+--
+-- Indexes for table `websgle_blog_post_entity_text`
+--
+ALTER TABLE `websgle_blog_post_entity_text`
+ ADD PRIMARY KEY (`value_id`), ADD UNIQUE KEY `UNQ_WEBSGLE_BLOG_POST_ENTT_TEXT_ENTT_ID_ATTR_ID_STORE_ID` (`entity_id`,`attribute_id`,`store_id`), ADD KEY `IDX_WEBSGLE_BLOG_POST_ENTITY_TEXT_ATTRIBUTE_ID` (`attribute_id`), ADD KEY `IDX_WEBSGLE_BLOG_POST_ENTITY_TEXT_STORE_ID` (`store_id`), ADD KEY `IDX_WEBSGLE_BLOG_POST_ENTITY_TEXT_ENTITY_ID` (`entity_id`);
+
+--
+-- Indexes for table `websgle_blog_post_entity_varchar`
+--
+ALTER TABLE `websgle_blog_post_entity_varchar`
+ ADD PRIMARY KEY (`value_id`), ADD UNIQUE KEY `UNQ_WEBSGLE_BLOG_POST_ENTT_VCHR_ENTT_ID_ATTR_ID_STORE_ID` (`entity_id`,`attribute_id`,`store_id`), ADD KEY `IDX_WEBSGLE_BLOG_POST_ENTITY_VARCHAR_ATTRIBUTE_ID` (`attribute_id`), ADD KEY `IDX_WEBSGLE_BLOG_POST_ENTITY_VARCHAR_STORE_ID` (`store_id`), ADD KEY `IDX_WEBSGLE_BLOG_POST_ENTITY_VARCHAR_ENTITY_ID` (`entity_id`);
+
+--
 -- Indexes for table `weee_discount`
 --
 ALTER TABLE `weee_discount`
@@ -11563,7 +11728,7 @@ ALTER TABLE `wishlist_item_option`
 -- AUTO_INCREMENT for table `adminnotification_inbox`
 --
 ALTER TABLE `adminnotification_inbox`
-MODIFY `notification_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Notification id',AUTO_INCREMENT=91;
+MODIFY `notification_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Notification id',AUTO_INCREMENT=92;
 --
 -- AUTO_INCREMENT for table `admin_assert`
 --
@@ -11573,7 +11738,7 @@ MODIFY `assert_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Assert ID';
 -- AUTO_INCREMENT for table `admin_role`
 --
 ALTER TABLE `admin_role`
-MODIFY `role_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Role ID',AUTO_INCREMENT=4;
+MODIFY `role_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Role ID',AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `admin_rule`
 --
@@ -11653,7 +11818,7 @@ MODIFY `rule_product_price_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 
 -- AUTO_INCREMENT for table `catalogsearch_fulltext`
 --
 ALTER TABLE `catalogsearch_fulltext`
-MODIFY `fulltext_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',AUTO_INCREMENT=10;
+MODIFY `fulltext_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `catalogsearch_query`
 --
@@ -11718,12 +11883,12 @@ MODIFY `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID',
 -- AUTO_INCREMENT for table `catalog_product_entity_datetime`
 --
 ALTER TABLE `catalog_product_entity_datetime`
-MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=55;
+MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT for table `catalog_product_entity_decimal`
 --
 ALTER TABLE `catalog_product_entity_decimal`
-MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=51;
+MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT for table `catalog_product_entity_gallery`
 --
@@ -11743,12 +11908,12 @@ MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREM
 -- AUTO_INCREMENT for table `catalog_product_entity_media_gallery`
 --
 ALTER TABLE `catalog_product_entity_media_gallery`
-MODIFY `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=5;
+MODIFY `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `catalog_product_entity_text`
 --
 ALTER TABLE `catalog_product_entity_text`
-MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=47;
+MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `catalog_product_entity_tier_price`
 --
@@ -11758,7 +11923,7 @@ MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID';
 -- AUTO_INCREMENT for table `catalog_product_entity_varchar`
 --
 ALTER TABLE `catalog_product_entity_varchar`
-MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=162;
+MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value ID',AUTO_INCREMENT=172;
 --
 -- AUTO_INCREMENT for table `catalog_product_link`
 --
@@ -12108,7 +12273,7 @@ MODIFY `attribute_group_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT
 -- AUTO_INCREMENT for table `eav_attribute_label`
 --
 ALTER TABLE `eav_attribute_label`
-MODIFY `attribute_label_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Label Id',AUTO_INCREMENT=7;
+MODIFY `attribute_label_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Attribute Label Id',AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `eav_attribute_option`
 --
@@ -12118,7 +12283,7 @@ MODIFY `option_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Id',
 -- AUTO_INCREMENT for table `eav_attribute_option_value`
 --
 ALTER TABLE `eav_attribute_option_value`
-MODIFY `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value Id',AUTO_INCREMENT=27;
+MODIFY `value_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Value Id',AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT for table `eav_attribute_set`
 --
@@ -12223,12 +12388,12 @@ MODIFY `type_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Type ID',
 -- AUTO_INCREMENT for table `log_url_info`
 --
 ALTER TABLE `log_url_info`
-MODIFY `url_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'URL ID',AUTO_INCREMENT=52;
+MODIFY `url_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'URL ID',AUTO_INCREMENT=62;
 --
 -- AUTO_INCREMENT for table `log_visitor`
 --
 ALTER TABLE `log_visitor`
-MODIFY `visitor_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Visitor ID',AUTO_INCREMENT=3;
+MODIFY `visitor_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Visitor ID',AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `log_visitor_online`
 --
@@ -12353,7 +12518,7 @@ MODIFY `index_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Index Id'
 -- AUTO_INCREMENT for table `report_event`
 --
 ALTER TABLE `report_event`
-MODIFY `event_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Event Id',AUTO_INCREMENT=5;
+MODIFY `event_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Event Id',AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `report_event_types`
 --
@@ -12503,12 +12668,12 @@ MODIFY `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id';
 -- AUTO_INCREMENT for table `sales_flat_quote`
 --
 ALTER TABLE `sales_flat_quote`
-MODIFY `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',AUTO_INCREMENT=2;
+MODIFY `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity Id',AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `sales_flat_quote_address`
 --
 ALTER TABLE `sales_flat_quote_address`
-MODIFY `address_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Address Id',AUTO_INCREMENT=3;
+MODIFY `address_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Address Id',AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `sales_flat_quote_address_item`
 --
@@ -12518,12 +12683,12 @@ MODIFY `address_item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Addre
 -- AUTO_INCREMENT for table `sales_flat_quote_item`
 --
 ALTER TABLE `sales_flat_quote_item`
-MODIFY `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Item Id',AUTO_INCREMENT=3;
+MODIFY `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Item Id',AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `sales_flat_quote_item_option`
 --
 ALTER TABLE `sales_flat_quote_item_option`
-MODIFY `option_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Id',AUTO_INCREMENT=7;
+MODIFY `option_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Option Id',AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `sales_flat_quote_payment`
 --
@@ -12635,6 +12800,11 @@ MODIFY `pk` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary key';
 ALTER TABLE `sitemap`
 MODIFY `sitemap_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Sitemap Id';
 --
+-- AUTO_INCREMENT for table `smashingmagazine_branddirectory_brand`
+--
+ALTER TABLE `smashingmagazine_branddirectory_brand`
+MODIFY `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity_id',AUTO_INCREMENT=11;
+--
 -- AUTO_INCREMENT for table `tag`
 --
 ALTER TABLE `tag`
@@ -12679,6 +12849,26 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id';
 --
 ALTER TABLE `tax_order_aggregated_updated`
 MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id';
+--
+-- AUTO_INCREMENT for table `websgle_blog_post_entity`
+--
+ALTER TABLE `websgle_blog_post_entity`
+MODIFY `entity_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Entity ID';
+--
+-- AUTO_INCREMENT for table `websgle_blog_post_entity_int`
+--
+ALTER TABLE `websgle_blog_post_entity_int`
+MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id';
+--
+-- AUTO_INCREMENT for table `websgle_blog_post_entity_text`
+--
+ALTER TABLE `websgle_blog_post_entity_text`
+MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id';
+--
+-- AUTO_INCREMENT for table `websgle_blog_post_entity_varchar`
+--
+ALTER TABLE `websgle_blog_post_entity_varchar`
+MODIFY `value_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Value Id';
 --
 -- AUTO_INCREMENT for table `weee_tax`
 --
@@ -14223,6 +14413,30 @@ ADD CONSTRAINT `FK_TAX_ORDER_AGGREGATED_CREATED_STORE_ID_CORE_STORE_STORE_ID` FO
 --
 ALTER TABLE `tax_order_aggregated_updated`
 ADD CONSTRAINT `FK_TAX_ORDER_AGGREGATED_UPDATED_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `websgle_blog_post_entity_int`
+--
+ALTER TABLE `websgle_blog_post_entity_int`
+ADD CONSTRAINT `FK_76653DF3301FF97A5058EA957365E650` FOREIGN KEY (`entity_id`) REFERENCES `websgle_blog_post_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `FK_WEBSGLE_BLOG_POST_ENTITY_INT_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `FK_WEBSGLE_BLOG_POST_ENTT_INT_ATTR_ID_EAV_ATTR_ATTR_ID` FOREIGN KEY (`attribute_id`) REFERENCES `eav_attribute` (`attribute_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `websgle_blog_post_entity_text`
+--
+ALTER TABLE `websgle_blog_post_entity_text`
+ADD CONSTRAINT `FK_DA4C893DE48C8E61E74BC7634BC4EEF6` FOREIGN KEY (`entity_id`) REFERENCES `websgle_blog_post_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `FK_WEBSGLE_BLOG_POST_ENTITY_TEXT_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `FK_WEBSGLE_BLOG_POST_ENTT_TEXT_ATTR_ID_EAV_ATTR_ATTR_ID` FOREIGN KEY (`attribute_id`) REFERENCES `eav_attribute` (`attribute_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `websgle_blog_post_entity_varchar`
+--
+ALTER TABLE `websgle_blog_post_entity_varchar`
+ADD CONSTRAINT `FK_13CECE1E6FF475DA342C3D468B61EF66` FOREIGN KEY (`entity_id`) REFERENCES `websgle_blog_post_entity` (`entity_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `FK_WEBSGLE_BLOG_POST_ENTITY_VARCHAR_STORE_ID_CORE_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `FK_WEBSGLE_BLOG_POST_ENTT_VCHR_ATTR_ID_EAV_ATTR_ATTR_ID` FOREIGN KEY (`attribute_id`) REFERENCES `eav_attribute` (`attribute_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `weee_discount`
