@@ -49,7 +49,7 @@
         <layout>
             <updates>
                 <bluecom_brandexample>
-                    <file>bluecom_brandexample.xml</file>
+                    <file>bluecom/bluecom_brandexample.xml</file>
                 </bluecom_brandexample>
             </updates>
         </layout>
