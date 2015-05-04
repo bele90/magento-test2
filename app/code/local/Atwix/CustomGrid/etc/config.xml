@@ -1,0 +1,27 @@
+<config>
+    <modules>
+        <Atwix_CustomGrid>
+            <version>0.1.0</version>
+        </Atwix_CustomGrid>
+    </modules>
+    <global>
+        <models>
+            <atwix_customgrid>
+                <class>Atwix_CustomGrid_Model</class>
+            </atwix_customgrid>
+        </models>
+    </global>
+    <adminhtml>
+        <events>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <customgrid_column_append>
+                        <type>model</type>
+                        <class>Atwix_CustomGrid_Model_Observer</class>
+                        <method>updateCustomColumn</method>
+                    </customgrid_column_append>
+                </observers>
+            </core_block_abstract_to_html_before>
+        </events>
+    </adminhtml>
+</config>

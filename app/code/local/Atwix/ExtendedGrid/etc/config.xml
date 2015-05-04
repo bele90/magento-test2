@@ -1,0 +1,42 @@
+<config>
+    <modules>
+        <Atwix_ExtendedGrid>
+            <version>0.1.0</version>
+        </Atwix_ExtendedGrid>
+    </modules>
+
+    <global>
+        <models>
+            <atwix_extendedgrid>
+                <class>Atwix_ExtendedGrid_Model</class>
+            </atwix_extendedgrid>
+        </models>
+
+        <helpers>
+            <atwix_extendedgrid>
+                <class>Atwix_ExtendedGrid_Helper</class>
+            </atwix_extendedgrid>
+        </helpers>
+    </global>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <atwix_extendedgrid>
+                    <file>atwix/extendedgrid.xml</file>
+                </atwix_extendedgrid>
+            </updates>
+        </layout>
+
+        <events>
+            <sales_order_grid_collection_load_before>
+                <observers>
+                    <atwix_extendedgrid>
+                        <model>Atwix_ExtendedGrid_Model_Observer</model>
+                        <method>salesOrderGridCollectionLoadBefore</method>
+                    </atwix_extendedgrid>
+                </observers>
+            </sales_order_grid_collection_load_before>
+        </events>
+    </adminhtml>
+</config>
