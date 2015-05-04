@@ -35,6 +35,17 @@
     </global>
     <frontend>
 
+        <events>
+            <page_block_html_topmenu_gethtml_before>
+                <observers>
+                    <bluecom_brandexample>
+                        <class>BlueCom_BrandExample_Model_Observer</class>
+                        <method>addToTopMenu</method>
+                    </bluecom_brandexample>
+                </observers>
+            </page_block_html_topmenu_gethtml_before>
+        </events>
+
         <layout>
             <updates>
                 <bluecom_brandexample>
