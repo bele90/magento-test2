@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <BlueCom_BrandDirectory>
+            <active>true</active>
+            <codePool>local</codePool>
+        </BlueCom_BrandDirectory>
+    </modules>
+</config>

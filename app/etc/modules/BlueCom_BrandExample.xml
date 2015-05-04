@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <BlueCom_BrandExample>
+            <active>true</active>
+            <codePool>local</codePool>
+        </BlueCom_BrandExample>
+    </modules>
+</config>

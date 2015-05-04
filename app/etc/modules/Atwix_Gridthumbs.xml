@@ -1,8 +1,0 @@
-<config>
-    <modules>
-        <Atwix_Gridthumbs>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Atwix_Gridthumbs>
-    </modules>
-</config>
