@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Atwix_CustomGrid>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Atwix_CustomGrid>
+    </modules>
+</config>
