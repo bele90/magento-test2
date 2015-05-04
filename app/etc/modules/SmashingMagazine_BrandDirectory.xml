@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <SmashingMagazine_BrandDirectory>
+            <active>true</active>
+            <codePool>local</codePool>
+        </SmashingMagazine_BrandDirectory>
+    </modules>
+</config>

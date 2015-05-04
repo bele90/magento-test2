@@ -1,0 +1,20 @@
+<h1><?php echo $this->__('Brand Directory'); ?></h1>
+
+<?php $brandCollection = $this->getBrandCollection(); ?>
+<?php if ($brandCollection->count() > 0): ?>
+    
+    <ul>
+        <?php foreach ($brandCollection as $_brand): ?>    
+            <li style="width: 100px; float: left; margin: 5px">
+                <a href="<?php echo $this->helper('smashingmagazine_brandexample/brand')->getBrandUrl($_brand); ?>" title="<?php echo $this->escapeHtml($_brand->getName()); ?>">
+                    <img src="<?php echo Mage::getBaseUrl('media').'smashingmagazine_branddirectory/'.$_brand->getImage()?>" style="width: 100px; height: 100px"/>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+    
+<?php else: ?>
+    
+    <?php echo $this->__('There are no brands to display at this time.'); ?>
+    
+<?php endif; ?>
