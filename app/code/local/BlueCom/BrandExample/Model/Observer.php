@@ -6,7 +6,7 @@
             $node = new Varien_Data_Tree_Node(array(
                 'name' => 'BRANDS',
                 'id' => 'brands',
-                'url' => Mage::getUrl().'/brand/',
+                'url' => Mage::getUrl().'brand/',
             ), 'id', $tree, $menu);
 
             $menu->addChild($node);
