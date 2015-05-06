@@ -4,7 +4,7 @@ class BlueCom_BrandExample_Model_Source_Brand extends Mage_Eav_Model_Entity_Attr
     public function getAllOptions()
     {
         $brandCollection = Mage::getModel('bluecom_branddirectory/brand')->getCollection()
-            ->setOrder('name', 'ASC');
+            ->setOrder('entity_id', 'ASC');
         
         $options = array(
             array(
