@@ -1,0 +1,39 @@
+<?php $brand = $this->getCurrentBrand(); ?>
+<?php if ($brand): ?>
+    
+    <h1><?php echo $brand->getName(); ?></h1>
+    <p>
+        <a href="<?php echo $this->helper('bluecom_brandexample/brand')->getBrandUrl($brand); ?>" title="<?php echo $this->escapeHtml($brand->getName()); ?>">
+            <img src="<?php echo Mage::getBaseUrl('media').'brand/'.$brand->getImage()?>" style="width: 200px; height: 200px"/>
+        </a>
+    </p>
+    <h3><?php echo $this->__('Description')?></h3>
+    <?php echo $brand->getDescription(); ?>
+    <p><a href="<?php echo $this->getUrl('bluecom_brandexample/index/index') ?>" title="<?php echo $this->__('Back to Brand Directory'); ?>"><?php echo $this->__('&laquo; Back to Brand Directory'); ?></a></p>
+    
+    <?php $productCollection = $this->getCollection(); ?>
+    <?php if ($productCollection->count() > 0): ?>
+        
+        <h2>Products</h2>
+        <div class="category-products">
+            <div class="toolbar">
+                <?php echo $this->getPagerHtml()?>
+            </div>
+            <ul >
+                <?php foreach ($productCollection as $_product): ?>
+                    <li class="item">
+                        <a href="<?php echo $this->getUrl('catalog/product/view', array('id' => $_product->getId())); ?>" title="<?php echo $this->escapeHtml($_product->getName()); ?>">
+                            <img src="<?php echo Mage::helper('catalog/image')->init($_product,'small_image')->resize(135,135); ?>" width="135" height="135" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /><?php echo $_product->getName(); ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            <div class="toolbar">
+                <?php echo $this->getPagerHtml()?>
+            </div>
+        </div>
+
+        
+    <?php endif; ?>
+    
+<?php endif; ?>

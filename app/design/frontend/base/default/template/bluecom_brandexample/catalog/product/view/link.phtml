@@ -1,0 +1,12 @@
+<?php $brand = $this->getBrand(); ?>
+
+<?php if ($brand): ?>
+
+    <h3><?php echo $this->__('Brand'); ?></h3>
+    <p>
+        <a href="<?php echo $this->helper('bluecom_brandexample/brand')->getBrandUrl($brand); ?>" title="<?php echo $this->escapeHtml($brand->getName()); ?>">
+            <img src="<?php echo Mage::getBaseUrl('media').'brand/'.$brand->getImage()?>" style="width: 100px; height: 100px"/>
+        </a>
+    </p>
+    
+<?php endif; ?>
