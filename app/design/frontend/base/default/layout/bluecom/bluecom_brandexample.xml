@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<layout>
+
+
+
+    <bluecom_brandexample_index_index>
+        <reference name="content">
+            <block type="bluecom_brandexample/list" name="bluecom.brandexample.list"
+                   template="bluecom_brandexample/list.phtml"/>
+        </reference>
+        <reference name="left">
+            <block type="bluecom_brandexample/left" name="bluecom.brandexample.list.left"
+                   template="bluecom_brandexample/left.phtml"/>
+        </reference>
+    </bluecom_brandexample_index_index>
+
+    <bluecom_brandexample_index_view>
+        <reference name="content">
+            <block type="bluecom_brandexample/view" name="bluecom.brandexample.view"
+                   template="bluecom_brandexample/view.phtml">
+                <block type="page/html_pager" name="bluecom.brandexample.pager"/>
+            </block>
+        </reference>
+        <reference name="left">
+            <block type="bluecom_brandexample/left" name="bluecom.brandexample.list.left"
+                   template="bluecom_brandexample/left.phtml"/>
+        </reference>
+    </bluecom_brandexample_index_view>
+
+    <catalog_product_view>
+        <reference name="product.info">
+            <block type="bluecom_brandexample/catalog_product_view_link" name="catalog.product.view.other.link"
+                   as="other" template="bluecom_brandexample/catalog/product/view/link.phtml"/>
+        </reference>
+    </catalog_product_view>
+
+</layout>
