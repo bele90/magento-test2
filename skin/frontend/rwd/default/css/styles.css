@@ -10597,3 +10597,6 @@ div.calendar table td.button {
   color: inherit;
   text-transform: none;
 }
+h1{
+    text-transform: uppercase;
+}
